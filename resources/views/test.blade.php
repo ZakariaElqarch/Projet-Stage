@@ -19,7 +19,7 @@
         Boostrap 5 is working using laravel 8 mix!
     </div>
 
-    <script src="assets/jquery.js"></script>
+    <script src="assets/js/jquery.js"></script>
     <script src="/bootstrap-5.2.3-dist/js/bootstrap.js"></script>
     <script>
         //Test jQuery
