@@ -36,3 +36,13 @@ Route::get('/', function () {
 Route::get('/required', function () {
     return view('auth0.user');
 })->middleware(['auth0.authenticate']);
+
+Route::get('/test1', function () {
+    return view('content.test');
+});
+
+
+Route::get('/test2', function () {
+    return view('test2');
+});
+
