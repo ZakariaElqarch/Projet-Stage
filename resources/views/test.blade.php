@@ -17,6 +17,7 @@
     {{-- Test Bootstrap css  --}}
     <div class="alert alert-success mt-5" role="alert">
         Boostrap 5 is working using laravel 8 mix!
+        You're a guest. <a href="{{ route('login') }}">Log in</a></p>
     </div>
 
     <script src="assets/js/jquery.js"></script>

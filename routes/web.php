@@ -20,7 +20,27 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/test', function () {
     return view('test');
-})->middleware(['auth0.authenticate']);
+});
+
+
+
+// route template 
+Route::get('/index', function () {
+    return view('template.layouts.template');
+})->name('index')->middleware(['auth0.authenticate']);;
+Route::get('/add-convention', function () {
+    return view('template.pages.add-convention');
+})->name('convention')->middleware(['auth0.authenticate']);
+
+Route::get('/add-project', function () {
+    return view('template.pages.add-project');
+})->name('project')->middleware(['auth0.authenticate']);
+
+
+
+// end route template 
+
+//->middleware(['auth0.authenticate']);
 
 
 
@@ -29,10 +49,10 @@ Route::get('/logout', \Auth0\Laravel\Http\Controller\Stateful\Logout::class)->na
 Route::get('/auth0/callback', \Auth0\Laravel\Http\Controller\Stateful\Callback::class)->name('auth0.callback');
 
 Route::get('/', function () {
-    return view('auth0.user');
+    return view('template.layouts.template');
 })->middleware(['auth0.authenticate.optional']);
 
 // Require an authenticated session to access this route.
 Route::get('/required', function () {
-    return view('auth0.user');
+    return view('template.layouts.template');
 })->middleware(['auth0.authenticate']);
