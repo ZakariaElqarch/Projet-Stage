@@ -6,13 +6,13 @@
         <!--logo -->
         <div class="logo">
             <a href="index.html">
-                <h1>NOVUS</h1>
-                <span>AdminPanel</span>
+                <h1>Gestion</h1>
+                <span>convention</span>
             </a>
         </div>
         <!--//logo-->
         <!--search-box-->
-        <div class="search-box">
+        {{-- <div class="search-box">
             <form class="input">
                 <input class="sb-search-input input__field--madoka" placeholder="Search..." type="search" id="input-31" />
                 <label class="input__label" for="input-31">
@@ -21,27 +21,27 @@
                     </svg>
                 </label>
             </form>
-        </div><!--//end-search-box-->
+        </div><!--//end-search-box--> --}}
         <div class="clearfix"> </div>
     </div>
     <div class="header-right">
         <div class="profile_details_left">
             <!--notifications of menu start -->
             <ul class="nofitications-dropdown">
-                <li class="dropdown head-dpdn">
+                {{-- <li class="dropdown head-dpdn">
                     <a href="#"><i class="fa fa-cog"></i> Settings</a>
                     <ul class="dropdown-menu">
                         
                             
-                            {{-- 
-                            <a href="#"><i class="fa fa-sign-out"></i> Logout</a> --}}
+                             
+                           <a href="#"><i class="fa fa-sign-out"></i> Logout</a>
                                     <div class="clearfix"> </div>				
                        
                         
                         
                            
                     </ul>
-                </li>
+                </li> --}}
 	
                 <li class="dropdown head-dpdn">
                     <a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Logout</a>

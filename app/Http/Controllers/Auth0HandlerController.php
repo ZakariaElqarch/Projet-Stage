@@ -13,6 +13,7 @@ class Auth0HandlerController extends Controller
         return view('test');
     }
     public function login(){
+        session()->forget('auth0\_\_user');
         return view('template.layouts.template');
     }
 

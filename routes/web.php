@@ -25,9 +25,7 @@ Route::get('/test', function () {
 
 
 // route template 
-Route::get('/index', function () {
-    return view('template.layouts.template');
-})->name('index')->middleware(['auth0.authenticate']);;
+Route::get('/index', 'App\Http\Controllers\Auth0HandlerController@login')->name('index')->middleware(['auth0.authenticate']);;
 Route::get('/add-convention', function () {
     return view('template.pages.add-convention');
 })->name('convention')->middleware(['auth0.authenticate']);
