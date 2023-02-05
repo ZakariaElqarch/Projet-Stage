@@ -1599,7 +1599,7 @@ button.note-color-btn {
 .forgot a:hover{
     color: #e94e02;
 }
-.login-page input[type="submit"] {
+.login-page input[type="submit"] , .login {
     border: none;
     outline: none;
     cursor: pointer;
@@ -1609,6 +1609,9 @@ button.note-color-btn {
     padding: .5em 1em;
     font-size: 1em;
     margin: 0.5em 0 0;
+}
+.login-link{
+    color: #fff;
 }
 .login-page input[type="submit"]:hover{
     background: #4F52BA;

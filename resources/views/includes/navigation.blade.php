@@ -9,7 +9,7 @@
 								<span class="fa arrow"></span></a>
 							<ul class="nav nav-second-level collapse">
 								<li>
-									<a href="grids.html">Ajouter Une Convention</a>
+									<a href={{ route('ajouter') }} >Ajouter Une Convention</a>
 								</li>
 								<li>
 									<a href="media.html">Voir Tout Les Conventions</a>

@@ -64,6 +64,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="sticky-header header-section ">
             @include('includes.header')
         </div>
+
+        <div id="page-wrapper">
+            <div class="main-page">
+                @yield('content')
+            </div>
+        </div>
         <!--footer-->
         <div class="footer">
             @include('includes.footer')
