@@ -29,10 +29,19 @@ Route::get('/logout', \Auth0\Laravel\Http\Controller\Stateful\Logout::class)->na
 Route::get('/auth0/callback', \Auth0\Laravel\Http\Controller\Stateful\Callback::class)->name('auth0.callback');
 
 Route::get('/', function () {
-    return view('auth0.user');
-})->middleware(['auth0.authenticate.optional']);
+    return view('content.home');
+})->name('home');//->middleware(['auth0.authenticate.optional']);
 
 // Require an authenticated session to access this route.
 Route::get('/required', function () {
     return view('auth0.user');
 })->middleware(['auth0.authenticate']);
+
+Route::get('/testhome', function () {
+    return view('content.home');
+})->name('home');
+
+
+Route::get('/ajouter', function () {
+    return view('content.ajout');
+})->name('ajouter');//->middleware(['auth0.authenticate']);
