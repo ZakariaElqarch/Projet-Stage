@@ -2,7 +2,7 @@
 				<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
 					<ul class="nav" id="side-menu">
 						<li>
-							<a href="index.html" class="active"><i class="fa fa-home nav_icon"></i>Dashboard</a>
+							<a href={{route('home')}} class="active"><i class="fa fa-home nav_icon"></i>Home</a>
 						</li>
 						<li>
 							<a href="#"><i class="fa fa-file-text-o nav_icon"></i>Conventions
