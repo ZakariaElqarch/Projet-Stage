@@ -50,6 +50,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="assets/js/custom.js"></script>
     <link href="assets/css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
+
+
+    <!-- vite hot reload -->
+    @vite('resources/js/app.js')
 </head>
 
 <body class="cbp-spmenu-push">
