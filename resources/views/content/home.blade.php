@@ -9,14 +9,10 @@
         </div>
         <div class="login-body">
 
-            <a href={{ route('login') }} class="login-link "> 
+            <a href={{ route('login') }} class="login-link ">
                 <button name="Sign In" value="Sign In" class="login">Login</button>
             </a>
-
-
         </div>
     </div>
-
-
 </div>
 @endsection
