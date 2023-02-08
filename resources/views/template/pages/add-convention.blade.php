@@ -1,43 +1,69 @@
 @extends('template.layouts.template');
 @section('content');
 @csrf
-<div class="form-container">
-    <form class="form-group">
-      <label>Titre:</label>
-      <input type="text" name="title">
+<div id="page-wrapper">
+  <div class="main-page">
+    <div class="form-three widget-shadow">
+      <h3 class="title1">Ajoutee une Convention :</h3>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="focusedinput" class="col-sm-3 control-label">Titre</label>
+          <div class="col-sm-8">
+            <input type="text" class="form-control1" id="focusedinput" placeholder="Titre">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Date de début:</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control1" placeholder="{{ date('Y-m-d') }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-3 control-label">Date de fin:</label>
+          <div class="col-sm-8">
+            <input type="password" class="form-control1" placeholder="{{ date('Y-m-d') }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="focusedinput" class="col-sm-3 control-label">Budget</label>
+          <div class="col-sm-8">
+              <input type="text" class="form-control1" id="focusedinput" placeholder="Budget">
+          </div>
+      </div>
 
-      <label>Date de début:</label>
-      <input type="date" name="start-date">
+        <div class="form-group">
+          <label for="selector1" class="col-sm-3 control-label">Liste de division:</label>
+          <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
+              <option>division 1.</option>
+              <option>division 2</option>
+              <option>division 3.</option>
+              <option>division 4.</option>
+            </select>
+          </div>
+        </div>
 
-      <label>Date de fin:</label>
-      <input type="date" name="end-date">
+        <div class="form-group">
+          <label for="selector1" class="col-sm-3 control-label">Liste des service :</label>
+          <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
+              <option>service 1.</option>
+              <option>service 2</option>
+              <option>service 3.</option>
+              <option>service 4.</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="txtarea1" class="col-sm-3 control-label">Les associés:</label>
+          <div class="col-sm-8"><textarea name="txtarea1" id="txtarea1"
+              placeholder="saisie chaque assoscier dans un ligne" cols="50" rows="10" class="form-control1"></textarea>
+          </div>
+        </div>
 
-      <label>Les associés:</label>
-      <input type="text" name="associés">
-      <!-- <select name="associates">
-        <option value="associate1">Associé 1</option>
-        <option value="associate2">Associé 2</option>
-        <option value="associate3">Associé 3</option>
-      </select> -->
-
-      <label>Liste de convention:</label>
-      <select name="convention-list">
-        <option value="convention1">Convention 1</option>
-        <option value="convention2">Convention 2</option>
-        <option value="convention3">Convention 3</option>
-      </select>
-
-      <label>Liste de division:</label>
-      <select name="division-list">
-        <option value="division1">Division 1</option>
-        <option value="division2">Division 2</option>
-        <option value="division3">Division 3</option>
-      </select>
-
-      <label>Budget:</label>
-      <input type="text" name="budget">
-
-      <input type="submit" value="Submit">
-    </form>
+        <div class="col-sm-offset-2">
+          <button type="submit" class="btn btn-default">Envoyer</button>
+      </div>
+      </form>
+    </div>
   </div>
-  @endsection;
+</div>
+@endsection;

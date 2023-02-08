@@ -378,13 +378,12 @@ ul.dropdown-menu{
 }
 li.dropdown.head-dpdn {
     display: inline-block;
-    padding:1.7em 5px;
-    border-right: 1px solid #E0E0E0;
+    padding: 1.7em 0;
+    border-left: 1px solid #E0E0E0;
 	float: left;
-    width: 90px;
 }
 li.dropdown.head-dpdn:nth-child(3) {
-    border-right: 1px solid #E0E0E0;
+    border-right: 1px solid #000000;
 }
 li.dropdown.head-dpdn a.dropdown-toggle {
     padding: 1.7em 2em;
@@ -1331,6 +1330,7 @@ section#tables  p {
 }
 .form-body {
     padding: 1.5em 2em;
+    width: 900px;
 }
 .inline-form .form-group,.inline-form .checkbox, .form-two .form-group{
     margin-right: 1em;
@@ -1344,9 +1344,9 @@ section#tables  p {
 .help-block {
     margin-top: 10px;
 }
-.forms button.btn.btn-default {
+.forms button.btn .btn-default {
     background-color: rgba(97, 100, 193, 0.85);
-    color: #fff;
+    color: #8636bb;
     padding: .5em 1.5em;
 	border: none;
 	outline:none;
@@ -1359,8 +1359,10 @@ section#tables  p {
     margin-top: 2em;
 }
 .form-three{
-    margin-top:2em;
+    margin-top:1.3em;
+
     padding: 2em;
+  
 }
 /* --  general forms  -- */
 .form-control1, .form-control_2.input-sm{
@@ -3985,66 +3987,14 @@ h4.title3 {
     margin: 1em auto 0;
 }
 }
+
+/* start costume style*/
+
+#txtarea1{
+    height: 100px;
+}
+
+/* end costume style*/
+
+
 /*--//responsive-design---*/
-/* style add convention form */
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 1000px;
-    margin-left: 300px;
-    margin-top: 50px;
-  }
-
-  label {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  input[type="date" ], input[type="text" ], select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-
-  input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-  }
-  /* end style form */
-  /* scoll-bar*/
-
-
-  body::-webkit-scrollbar {
-    width: 0.5em;
-    background-color: #F5F5F5;
-  } 
-   
-  body::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    outline: 1px solid slategrey;
-    border-radius: 10px;
-  }
-   
-  body::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
-  }
-   
-  body::-webkit-scrollbar-button {
-    width: 0.5em;
-    height: 0.5em;
-    background-color: #F5F5F5;
-  }
-   
-  body::-webkit-scrollbar-button:hover {
-    background-color: #000000;
-  }
-  
-  /* end of scroll-bar*/

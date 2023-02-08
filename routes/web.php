@@ -35,6 +35,27 @@ Route::get('/add-project', function () {
 })->name('project')->middleware(['auth0.authenticate']);
 
 
+Route::get('/add-Devision', function () {
+    return view('template.pages.add-devision');
+})->name('Devision')->middleware(['auth0.authenticate']);
+
+
+Route::get('/add-Service', function () {
+    return view('template.pages.add-service');
+})->name('Service')->middleware(['auth0.authenticate']);
+
+Route::get('/index-convention', function () {
+    return view('template.pages.index-convention');
+})->name('index-convention')->middleware(['auth0.authenticate']);
+
+Route::get('/index-projet', function () {
+    return view('template.pages.index-projet');
+})->name('index-projet')->middleware(['auth0.authenticate']);
+
+Route::get('/index-service', function () {
+    return view('template.pages.index-service');
+})->name('index-service')->middleware(['auth0.authenticate']);
+
 
 // end route template 
 
