@@ -14,15 +14,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="selector1" class="col-sm-3 control-label">Liste des service :</label>
-                        <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
-                                <option>service 1.</option>
-                                <option>service 2.</option>
-                                <option>service 3.</option>
-                                <option>service 4.</option>
-                            </select>
+                        <label for="txtarea1" class="col-sm-3 control-label">les nom des Services</label>
+                        <div class="col-sm-8"><textarea name="txtarea1" id="txtarea1"
+                            placeholder="saisie chaque service dans un ligne" cols="50" rows="10" class="form-control1"></textarea>
                         </div>
-                    </div>
+                      </div>
                     <div class="col-sm-offset-2"> <button type="submit" class="btn btn-default">Envoyer</button> </div>
                 </form>
             </div>

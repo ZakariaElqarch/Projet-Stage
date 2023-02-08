@@ -5,8 +5,9 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/app.css',
-                'resources/js/app.js'
+                
+                'assets\\css\\style.css',
+                'assets\\js\\custom.js'
             ],
             refresh: true,
         }),

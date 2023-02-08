@@ -15,19 +15,19 @@
         <div class="form-group">
           <label class="col-sm-3 control-label">Date de début:</label>
           <div class="col-sm-8">
-            <input type="password" class="form-control1" placeholder="{{ date('Y-m-d') }}">
+            <input type="date" class="form-control1" placeholder="{{ date('Y-m-d') }}">
           </div>
         </div>
         <div class="form-group">
           <label class="col-sm-3 control-label">Date de fin:</label>
           <div class="col-sm-8">
-            <input type="password" class="form-control1" placeholder="{{ date('Y-m-d') }}">
+            <input type="date" class="form-control1" placeholder="{{ date('Y-m-d') }}">
           </div>
         </div>
         <div class="form-group">
           <label for="focusedinput" class="col-sm-3 control-label">Budget</label>
           <div class="col-sm-8">
-              <input type="text" class="form-control1" id="focusedinput" placeholder="Budget">
+              <input type="number" class="form-control1" id="focusedinput" placeholder="Budget">
           </div>
       </div>
 

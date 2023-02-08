@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery and Bootstrap</title>
     
-    <link href="/bootstrap-5.2.3-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
     
     
 </head>
@@ -20,8 +20,8 @@
         You're a guest. <a href="{{ route('login') }}">Log in</a></p>
     </div>
 
-    <script src="assets/js/jquery.js"></script>
-    <script src="/bootstrap-5.2.3-dist/js/bootstrap.js"></script>
+    <script src="{{ asset('assets/js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.js') }}"></script>
     <script>
         //Test jQuery
         $(document).ready(function() {
