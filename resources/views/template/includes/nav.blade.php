@@ -3,41 +3,26 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a href="{{ route('index') }}" class="active"><i class="fa fa-home nav_icon"></i>Dashboard</a>
+                    <a href="{{ route('index') }}" class="active"><i class="bi bi-house nav_icon"></i>Dashboard</a>
                 </li>
-                
-                <li >
-                    <a href="#">
-                        <i class="fa fa-file-text-o nav_icon"></i>Pages</a>
-                    <ul class="nav nav-second-level collapse">
-                        <li>
-                            <a href="{{ route('convention') }}">Ajouter une Convention</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('project') }}">Ajouter un Projet</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('Devision') }}">Ajouter une Devision</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('Service') }}">Ajouter un Service</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index-convention') }}">lister Tous les conventions</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index-projet') }}">lister Tous projets</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('index-service') }}">lister Tous les Services</a>
-                        </li>
-                      
-                    </ul>
-                    <!-- //nav-second-level -->
+
+                <li>
+                    <a href="{{ route('index-convention') }}"><i class="bi bi-file-text nav_icon"></i>Convention </a>
                 </li>
-               
+
+                <li>
+                    <a href="{{ route('project') }}"><i class="bi bi-journal-x nav_icon" viewBox="0 0 16 16"></i>Projet
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('Devision') }}"><i class="bi bi-building nav_icon"></i>Devision </a>
+                </li>
+
+                <li>
+                    <a href="{{ route('Service') }}"><i class="bi bi-house-gear nav_icon"></i>Service </a>
+                </li>
             </ul>
-            <!-- //sidebar-collapse -->
         </nav>
     </div>
 </div>
