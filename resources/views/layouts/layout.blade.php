@@ -21,6 +21,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- font-awesome icons -->
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
+    <!-- bootstrap icons -->
+    <link href="asstes/fonts/font/fonts/bootstrap-icons"
     <!-- js-->
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
@@ -28,7 +30,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <!--//webfonts-->
     <!--animate-->
-
+    <!-- mask -->
+    <script src="assets/js/jquery.mask.js"></script>
     <!-- Wow. js is a JavaScript library that generates CSS animations as you scroll along any webpage. -->
     <link href="assets/css/animate.css" rel="stylesheet" type="text/css" media="all">
     <script src="assets/js/wow.min.js"></script>

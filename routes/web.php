@@ -45,3 +45,13 @@ Route::get('/testhome', function () {
 Route::get('/ajouter', function () {
     return view('content.ajout');
 })->name('ajouter');//->middleware(['auth0.authenticate']);
+
+
+Route::get('/add-project', function () {
+    return view('content.add-project');
+})->name('add-project');//->middleware(['auth0.authenticate']);
+
+
+Route::get('/list-project', function () {
+    return view('content.list-project');
+})->name('list-project');//->middleware(['auth0.authenticate']);
