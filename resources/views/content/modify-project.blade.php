@@ -2,9 +2,9 @@
 
 @section('content')
 <!-- Form start Here -->
-<h3 class="title1">Ajouter Un Projet:</h3>
+<h3 class="title1">Modifier Le Projet:</h3>
 <a href={{ route('list-project') }} class="login-link col-sm-offset-9 ">
-    <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
+    <button name="Sign In" value="Sign In" class="btn btn-default add-btn ">Retour</button>
 </a>
 <div class="form-three widget-shadow">
     <form class="form-horizontal">
@@ -12,24 +12,27 @@
         <div class="form-group">
             <label for="focusedinput" class="col-sm-2 control-label">Titre<span class="required"> *</span></label>
             <div class="col-sm-8">
-                <input type="text" class="form-control1" id="focusedinput">
+                <input type="text" value="Projet 1" class="form-control1" id="focusedinput">
             </div>
 
         </div>
         <div class="form-group">
-            <label for="focusedinput" class="col-sm-2 control-label">Date Validation<span class="required"> *</span></label>
+            <label for="focusedinput" class="col-sm-2 control-label">Date Debut<span class="required"> *</span></label>
             <div class="col-sm-8">
-                <input type="text" class="form-control1" name="validationDate" >
-                <!-- <input type="text" name="validationDate"  /> -->
-
+                <input type="date" class="form-control1">
             </div>
         </div>
-
+        <div class="form-group">
+            <label for="focusedinput" class="col-sm-2 control-label">Date fin<span class="required"> *</span></label>
+            <div class="col-sm-8">
+                <input type="date" class="form-control1">
+            </div>
+        </div>
 
         <div class="form-group">
             <label for="focusedinput" class="col-sm-2 control-label">Budget<span class="required"> *</span></label>
             <div class="col-sm-8">
-                <input type="text" class="form-control1 budget" id="focusedinput">
+                <input type="text" value="10000dh" value="Projet 1" class="budget form-control1" id="focusedinput">
             </div>
         </div>
 
@@ -37,21 +40,19 @@
 
         <div class="form-group">
             <label for="selector1" class="col-sm-2 control-label">Convention<span class="required"> *</span></label>
-            <div class="col-sm-8">
-                <select name="selector1" id="selector1" class="form-control1">
-                    <option>convention 1</option>
+            <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
+                    <option selected>convention 1</option>
                     <option>convention 2</option>
                     <option>convention 3</option>
                     <option>convention 4</option>
-                </select>
-            </div>
+                </select></div>
         </div>
 
         <div class="form-group">
             <label for="selector1" class="col-sm-2 control-label">Phase<span class="required"> *</span></label>
             <div class="col-sm-8"><select name="selector1" id="selector1" class="form-control1">
                     <option>Initiale</option>
-                    <option>Execution</option>
+                    <option selected>Execution</option>
                     <option>réalisé</option>
                 </select></div>
         </div>
@@ -59,15 +60,12 @@
         <div class="form-group">
             <label for="focusedinput" class="col-sm-2 control-label">Taux d'avancement<span class="required"> *</span></label>
             <div class="col-sm-8">
-                <input type="text" class="form-control1" id="projectProgress" min="0" max="100">
+                <input type="text" value="80%" class="form-control1" id="projectProgress" min="0" max="100">
             </div>
         </div>
-        <div class="col-md-offset-8 btn-div">
-            <button type="reset" class="btn btn-primary costum-btn">Vider</button>
-            <button type="submit" class="btn btn-primary costum-btn" id="enregister">Enregitrer</button>
-            <input type="button"  class="btn btn-primary costum-btn" id="test"/>
-            <input type="button"  class="btn btn-primary costum-btn" id="test2"/>
-        </div>
+        <button type="submit" class="btn btn-primary costum-btn">Modify</button>
+        <button type="reset" class="btn btn-primary costum-btn">Vider</button>
+
     </form>
 
     <div class="required-msg">

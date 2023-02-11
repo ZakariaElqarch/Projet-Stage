@@ -22,8 +22,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="assets/css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- bootstrap icons -->
-    <link href="asstes/fonts/font/fonts/bootstrap-icons"
-    <!-- js-->
+    <link href="asstes/fonts/font/fonts/bootstrap-icons" <!-- js-->
     <script src="assets/js/jquery-1.11.1.min.js"></script>
     <script src="assets/js/modernizr.custom.js"></script>
     <!--webfonts-->
@@ -53,9 +52,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="assets/js/custom.js"></script>
     <link href="assets/css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
+    <!-- Date picker -->
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/daterangepicker.js"></script>
+    <link href="assets/css/daterangepicker.css" rel="stylesheet">
+
+    <!-- datatable -->
+    <link href="assets/css/jquery.dataTables.css" rel="stylesheet">
+    <script src="assets/js/jquery.dataTables.js"></script>
 
 
-    <!-- vite hot reload -->
+    <!--  -->
     @vite('resources/js/app.js')
 </head>
 
@@ -105,11 +112,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
     </script>
     <!--scrolling js-->
-    <script src="assets/js/jquery.nicescroll.js"></script>
+    <!-- <script src="assets/js/jquery.nicescroll.js"></script> -->
     <script src="assets/js/scripts.js"></script>
     <!--//scrolling js-->
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.js"> </script>
+
+    <!-- My js file -->
+    <script src="assets/js/project.add.js"></script>
+    <script src="assets/js/project.list.js"></script>
+    <!-- vite hot reload -->
+    <!-- datatable -->
+    
+    <!--  tostify -->
+    <script src="assets/js/toastify-js.js"></script>
+    <link href="assets/css/toastify.min.css" rel="stylesheet">
+
 </body>
 
 </html>

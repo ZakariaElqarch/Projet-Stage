@@ -55,3 +55,12 @@ Route::get('/add-project', function () {
 Route::get('/list-project', function () {
     return view('content.list-project');
 })->name('list-project');//->middleware(['auth0.authenticate']);
+
+Route::get('/modify-project', function () {
+    return view('content.modify-project');
+})->name('modify-project');
+
+Route::get('/project-detail', function () {
+    return view('content.project-detail');
+})->name('project-detail');
+

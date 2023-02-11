@@ -14,8 +14,7 @@ $(document).ready( function() {
     { startDate: thisMonth + '-10', endDate: thisMonth + '-14', title: 'Multi-Day Event' },
     { startDate: thisMonth + '-23', endDate: thisMonth + '-26', title: 'Another Multi-Day Event' }
   ];
-  var projectProgress = $('#projectProgress');
-  projectProgress.mask('##0,00%', {reverse: true});
+  
 
   // the order of the click handlers is predictable.
   // direct click action callbacks come first: click, nextMonth, previousMonth, nextYear, previousYear, or today.
