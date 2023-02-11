@@ -1,0 +1,48 @@
+#txtarea1 {
+    height: 100px;
+}
+
+.btn-default {
+    margin-bottom: 20px;
+}
+
+.required {
+    color: #e93e18;
+}
+
+.add-btn {
+    display: flex;
+    border: none;   
+    outline: none;
+    cursor: pointer;
+    color: #eeeeee;
+    background: #6164C1;
+    padding: .5em 1em;
+    font-size: 1em;
+    margin: 0.5em 0 0;
+    margin-left: 5px;
+}
+.flex{
+    display: flexbox;
+    flex: content;
+    flex-direction: row;
+    justify-content: end;
+}
+.btn{
+    float: right;
+}
+.title1{
+    margin-top:  10px;  
+} 
+.error{
+    font-size: 13px;
+    /* margin-top: -20px; */
+ background-color: red;
+}
+.action-btn{
+    margin-right: 7px;
+}
+.paginate_button .current{
+    background: #6164C1;
+    color: #eeeeee;
+}
