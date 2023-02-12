@@ -15,11 +15,7 @@
     // }
 
     //my js
-    var projectProgress = $('#projectProgress');
-    projectProgress.mask('##0,00%', { reverse: true });
-
-    var budget = $('.budget');
-    budget.mask('#.##0,00 DH', { reverse: true });
+    
 })(jQuery);
 
 

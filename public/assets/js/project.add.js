@@ -9,6 +9,15 @@
 // import Toastify from 'assets/css/toastify.css'
 
 $(function () {
+    //jquery mask
+    //percent
+    var projectProgress = $('#projectProgress');
+    projectProgress.mask('##0,00%', { reverse: true });
+    //dh
+    var budget = $('.budget');
+    budget.mask('#.##0,00 DH', { reverse: true });
+
+
 
     $('input[name="validationDate"]').daterangepicker({
         autoUpdateInput: false,
@@ -28,37 +37,62 @@ $(function () {
         $(this).val('');
     });
 
-    $('#test').on('click', function () {
-        Toastify({
-            text: "This is a toast",
-            duration: 5000,
-            newWindow: true,
-            close: true,
-            className: "error",
-            gravity: "top", // `top` or `bottom`
-            position: "center", // `left`, `center` or `right`
-            stopOnFocus: false, // Prevents dismissing of toast on hover
-            style: {
-                background: "red",
-                width: "500px"
-            },
-            onClick: function () { console.log("toastr") } // Callback after click
-        }).showToast();
-        
-    });
+    // $('#test').on('click', function () {
+    //     Toastify({
+    //         text: "This is a toast",
+    //         duration: 5000,
+    //         newWindow: true,
+    //         close: true,
+    //         className: "error",
+    //         gravity: "top", // `top` or `bottom`
+    //         position: "center", // `left`, `center` or `right`
+    //         stopOnFocus: false, // Prevents dismissing of toast on hover
+    //         style: {
+    //             background: "red",
+    //             width: "500px"
+    //         },
+    //         onClick: function () { console.log("toastr") } // Callback after click
+    //     }).showToast();
+
+    // });
     $('#test2').on('click', function () {
-        Toastify({
+       /* Toastify({
             text: "enregistrer avec succes",
             duration: 5000,
             close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "center", // `left`, `center` or `right`
-            stopOnFocus: false, // Prevents dismissing of toast on hover
+            gravity: "top", //`top` or `bottom`
+            position: "center", //`left`, `center` or `right`
+            stopOnFocus: false, //Prevents dismissing of toast on hover
             style: {
-              background: "green",
+                background: "green",
             },
-      
-          }).showToast();
+
+        }).showToast();*/
+
+        console.log(jQuery.type($("#projectProgress").val))
     });
-   
+
+    //from validation
+
+    $("#addProjectForm").validate({
+        rules: {
+            title: "required",
+            validationDate: "required",
+            budget: "required",
+            convention: "required",
+            phase: "required",
+            projectProgress: "required",
+
+        },
+        messages: {
+            title: "title is required",
+            validationDate: "validation date is required",
+            budget: "budget is required",
+            convention: "convention  is required",
+            phase: "phase is required",
+            projectProgress: "projectProgress is required",
+
+        }
+    });
+
 });

@@ -4253,3 +4253,8 @@ i.fa.fa-facebook.profile-icon {
 .btn-div{
     margin-top: 40px;
 }
+
+label.error {
+    color: #dc3545;
+    font-size: 14px;
+}

@@ -61,6 +61,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="assets/css/jquery.dataTables.css" rel="stylesheet">
     <script src="assets/js/jquery.dataTables.js"></script>
 
+    <!-- Jquery validate -->
+    <script src="assets/js/jquery.validate.min.js"></script>
 
     <!--  -->
     @vite('resources/js/app.js')
@@ -123,7 +125,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="assets/js/project.list.js"></script>
     <!-- vite hot reload -->
     <!-- datatable -->
-    
+
     <!--  tostify -->
     <script src="assets/js/toastify-js.js"></script>
     <link href="assets/css/toastify.min.css" rel="stylesheet">
