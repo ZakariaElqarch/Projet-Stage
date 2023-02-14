@@ -25,7 +25,7 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 					<div class="profile_img">
 						<div class="user-name">
-							<p>Wikolia</p>
+							<p>Hamza</p>
 							<span>Administrator</span>
 						</div>
 						<i class="fa fa-angle-down lnr"></i>
@@ -34,8 +34,8 @@
 					</div>
 				</a>
 				<ul class="dropdown-menu drp-mnu">
-					<li> <a href="#"><i class="fa fa-user"></i> Profile</a> </li>
-					<li> <a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Logout</a> </li>
+					<li> <a href="{{ route('profile')}}"><i class="fa fa-user"></i> Profile</a> </li>
+					<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
 				</ul>
 			</li>
 		</ul>
