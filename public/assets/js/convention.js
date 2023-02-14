@@ -43,6 +43,7 @@ $(document).on("ready", function () {
       SelectDivision: "required",
       SelectService: "required",
       SelectPartenaire: "required",
+      SelectCommunes: "required",
     },
     messages: {
       datefilter: "date is required",
@@ -50,6 +51,7 @@ $(document).on("ready", function () {
       SelectDivision: "Division is required",
       SelectService: "Service is required",
       SelectPartenaire: "Partenaire is required",
+      SelectCommunes: "Partenaire is required",
     }
   });
 

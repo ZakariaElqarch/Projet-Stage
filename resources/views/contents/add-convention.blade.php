@@ -68,6 +68,17 @@
           </select>
         </div>
       </div>
+      <div class="form-group">
+        <label for="selector1" class="col-sm-3 control-label">Les Communes:<span class="required"> *</span></label>
+        <div class="col-sm-8 errorCommunes"><select multiple name="SelectCommunes" id="Communes" class="form-control1">
+          
+            <option value="Partenaire 1">Communes 1.</option>
+            <option value="Partenaire 2">Communes 2</option>
+            <option value="Partenaire 3">Communes 3.</option>
+            <option value="Partenaire 4">Communes 4.</option>
+          </select>
+        </div>
+      </div>
       <div class="col-sm-offset-2">
         <button type="submit" class="btn btn-default add-btn" value="enregistere">Enregistere</button>
         <button type="reset" class="btn btn-default add-btn">Vider</button>
