@@ -34,8 +34,8 @@
       <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">Division:<span class="required">
             *</span></label>
-        <div class="col-sm-8 errorDivision"><select name="SelectDivision" id="division" class="form-control1">
-            <option value="">--Please choose an option--</option>
+        <div class="col-sm-8 errorDivision"><select multiple name="SelectDivision" id="division" class="form-control1">
+
             <option value="division 1">division 1.</option>
             <option value="division 2">division 2</option>
             <option value="division 3.">division 3.</option>
@@ -47,8 +47,8 @@
       <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">S ervice :<span class="required">
             *</span></label>
-        <div class="col-sm-8 errorService"><select name="SelectService" id="service" class="form-control1">
-            <option value="">--Please choose an option--</option>
+        <div class="col-sm-8 errorService"><select multiple name="SelectService" id="service" class="form-control1">
+         
             <option value="service 1.">service 1.</option>
             <option value="service 2">service 2</option>
             <option value="service 3">service 3.</option>
@@ -59,8 +59,8 @@
 
       <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">Les Partenaires:<span class="required"> *</span></label>
-        <div class="col-sm-8 errorPartenaire"><select name="SelectPartenaire" id="Partenaires" class="form-control1">
-            <option value="">--Please choose an option--</option>
+        <div class="col-sm-8 errorPartenaire"><select multiple name="SelectPartenaire" id="Partenaires" class="form-control1">
+          
             <option value="Partenaire 1">Partenaire 1.</option>
             <option value="Partenaire 2">Partenaire 2</option>
             <option value="Partenaire 3">Partenaire 3.</option>

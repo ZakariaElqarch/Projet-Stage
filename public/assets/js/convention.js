@@ -6,6 +6,7 @@ $(document).on("ready", function () {
     responsive: true
   });
 
+
     $('#Validity').daterangepicker({
       autoUpdateInput: false,
       locale: {
