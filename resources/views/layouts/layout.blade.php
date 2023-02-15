@@ -11,6 +11,7 @@
     <link href="assets/vendors/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel='stylesheet' type='text/css' />
+    <link href="assets/css/form.project.css" rel="stylesheet">
     <!-- font CSS -->
     <!-- font-awesome icons -->
     <link href="assets/vendors/css/font-awesome.css" rel="stylesheet">
@@ -71,7 +72,7 @@
     <div class="main-content">
         <!--left-fixed -navigation-->
         <div class=" sidebar" role="navigation">
-            @include('includes.navigation')
+            @include('includes.nav')
         </div>
 
         <!-- header-starts -->
@@ -119,7 +120,7 @@
     
 
     <!-- My js file -->
-    <script src="assets/js/project.add.js"></script>
+    <script src="assets/js/from.project.js"></script>
     <script src="assets/js/project.list.js"></script>
     
 

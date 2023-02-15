@@ -10,9 +10,6 @@
 
 $(function () {
     //jquery mask
-    //percent
-    var projectProgress = $('#projectProgress');
-    projectProgress.mask('##0,00%', { reverse: true });
     //dh
     var budget = $('.budget');
     budget.mask('#.##0,00 DH', { reverse: true });
@@ -76,7 +73,10 @@ $(function () {
 
     $("#addProjectForm").validate({
         rules: {
-            title: "required",
+            title: {
+                required: true,
+                max: 255
+              },
             validationDate: "required",
             budget: "required",
             convention: "required",
@@ -85,7 +85,10 @@ $(function () {
 
         },
         messages: {
-            title: "title is required",
+            title: {
+                required: "Title is required",
+                max: "255 max"
+              },
             validationDate: "validation date is required",
             budget: "budget is required",
             convention: "convention  is required",
@@ -95,4 +98,24 @@ $(function () {
         }
     });
 
+    $("#advancementRange").on('change', function(){
+        
+        $("#advancementVal").html($("#advancementRange").val()+"%")
+    })
+    $("#phase").on('change', function(){
+       
+         let phase = $("#phase").val();
+         if(phase == "initiale"){
+            $("#advancementRange").val(0);
+            $("#advancementRange").prop('disabled', true);
+            $("#advancementVal").html($("#advancementRange").val()+"%")
+            
+         }else if (phase == "realise"){
+            $("#advancementRange").val(100);
+            $("#advancementRange").prop('disabled', true);
+            $("#advancementVal").html($("#advancementRange").val()+"%")
+         }else{
+            $("#advancementRange").prop('disabled', false);
+         }
+    })
 });
