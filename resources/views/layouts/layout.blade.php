@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 
@@ -14,57 +8,62 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <link href="assets/vendors/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel='stylesheet' type='text/css' />
     <!-- font CSS -->
     <!-- font-awesome icons -->
-    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/vendors/css/font-awesome.css" rel="stylesheet">
     <!-- //font-awesome icons -->
     <!-- bootstrap icons -->
-    <link href="asstes/fonts/font/fonts/bootstrap-icons" <!-- js-->
-    <script src="assets/js/jquery-1.11.1.min.js"></script>
-    <script src="assets/js/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/vendors/fonts/font/bootstrap-icons.css"><!-- js-->
+    <script src="assets/vendors/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/vendors/js/modernizr.custom.js"></script>
     <!--webfonts-->
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <!--//webfonts-->
     <!--animate-->
     <!-- mask -->
-    <script src="assets/js/jquery.mask.js"></script>
+    <script src="assets/vendors/js/jquery.mask.js"></script>
     <!-- Wow. js is a JavaScript library that generates CSS animations as you scroll along any webpage. -->
-    <link href="assets/css/animate.css" rel="stylesheet" type="text/css" media="all">
-    <script src="assets/js/wow.min.js"></script>
+    <link href="assets/vendors/css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="assets/vendors/js/wow.min.js"></script>
     <script>
         new WOW().init();
     </script>
     <!--//end-animate-->
 
     <!-- Underscore.js is a JavaScript library which provides utility functions for common programming tasks -->
-    <script src="assets/js/underscore-min.js" type="text/javascript"></script>
+    <script src="assets/vendors/js/underscore-min.js" type="text/javascript"></script>
 
     <!-- moment js library  which helps is parsing, validating, manipulating and displaying date/time in JavaScript in a very easy way  -->
-    <script src="assets/js/moment-2.2.1.js" type="text/javascript"></script>
+    <script src="assets/vendors/js/moment-2.2.1.js" type="text/javascript"></script>
 
     <script src="assets/js/site.js" type="text/javascript"></script>
 
     <!-- Metis Menu -->
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="assets/vendors/js/metisMenu.min.js"></script>
+    <script src="assets/vendors/js/custom.js"></script>
     <link href="assets/css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
     <!-- Date picker -->
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/daterangepicker.js"></script>
-    <link href="assets/css/daterangepicker.css" rel="stylesheet">
+    <script src="assets/vendors/js/moment.min.js"></script>
+    <script src="assets/vendors/js/daterangepicker.js"></script>
+    <link href="assets/vendors/css/daterangepicker.css" rel="stylesheet">
 
     <!-- datatable -->
-    <link href="assets/css/jquery.dataTables.css" rel="stylesheet">
-    <script src="assets/js/jquery.dataTables.js"></script>
+    <link href="assets/vendors/css/jquery.dataTables.css" rel="stylesheet">
+    <script src="assets/vendors/js/jquery.dataTables.js"></script>
 
     <!-- Jquery validate -->
-    <script src="assets/js/jquery.validate.min.js"></script>
-
+    <script src="assets/vendors/js/jquery.validate.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="assets/vendors/js/bootstrap.js"> </script>
     <!--  -->
+    <!--  tostify -->
+    <script src="assets/vendors/js/toastify-js.js"></script>
+    <link href="assets/vendors/css/toastify.min.css" rel="stylesheet">
+    
     @vite('resources/js/app.js')
 </head>
 
@@ -93,7 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     </div>
     <!-- Classie -->
-    <script src="assets/js/classie.js"></script>
+    <script src="assets/vendors/js/classie.js"></script>
     <script>
         var menuLeft = document.getElementById('cbp-spmenu-s1'),
             showLeftPush = document.getElementById('showLeftPush'),
@@ -117,18 +116,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- <script src="assets/js/jquery.nicescroll.js"></script> -->
     <script src="assets/js/scripts.js"></script>
     <!--//scrolling js-->
-    <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.js"> </script>
+    
 
     <!-- My js file -->
     <script src="assets/js/project.add.js"></script>
     <script src="assets/js/project.list.js"></script>
-    <!-- vite hot reload -->
-    <!-- datatable -->
+    
 
-    <!--  tostify -->
-    <script src="assets/js/toastify-js.js"></script>
-    <link href="assets/css/toastify.min.css" rel="stylesheet">
+    
 
 </body>
 

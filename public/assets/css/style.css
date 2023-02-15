@@ -4223,7 +4223,7 @@ i.fa.fa-facebook.profile-icon {
 }
 /*--//responsive-design---*/
 
-.required {
+.required, label.error{
     color: #e94e02;
     font-size: 0.9em;
 }
@@ -4254,7 +4254,3 @@ i.fa.fa-facebook.profile-icon {
     margin-top: 40px;
 }
 
-label.error {
-    color: #dc3545;
-    font-size: 14px;
-}

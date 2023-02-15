@@ -13,10 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});
-*/
+
 
 Route::get('/test', function () {
     return view('test');
@@ -36,15 +33,6 @@ Route::get('/', function () {
 Route::get('/required', function () {
     return view('auth0.user');
 })->middleware(['auth0.authenticate']);
-
-Route::get('/testhome', function () {
-    return view('content.home');
-})->name('home');
-
-
-Route::get('/ajouter', function () {
-    return view('content.ajout');
-})->name('ajouter');//->middleware(['auth0.authenticate']);
 
 
 Route::get('/add-project', function () {

@@ -1,1 +1,1 @@
-$('.table').DataTable();
+$('#projectTable').DataTable();
