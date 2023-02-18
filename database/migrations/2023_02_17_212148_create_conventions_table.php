@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('test', function (Blueprint $table) {
-            $table->id();
+        Schema::create('conventions', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('titre', 255);
+            $table->string('date_Validiter');
+            $table->string('budget', 1000);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('test');
+        Schema::dropIfExists('conventions');
     }
 };
