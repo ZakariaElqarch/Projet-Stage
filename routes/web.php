@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\projectController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,14 +35,11 @@ Route::get('/required', function () {
 })->middleware(['auth0.authenticate']);
 
 
-Route::get('/add-project', function () {
-    return view('content.add-project');
-})->name('add-project');//->middleware(['auth0.authenticate']);
+Route::get('/add-project', [projectController::class, 'create'])->name('add-project');
+Route::post('/add-project', [projectController::class, 'store']);//->middleware(['auth0.authenticate']);
 
 
-Route::get('/list-project', function () {
-    return view('content.list-project');
-})->name('list-project');//->middleware(['auth0.authenticate']);
+Route::get('/list-project', [projectController::class, 'index'])->name('list-project');//->middleware(['auth0.authenticate']);
 
 Route::get('/modify-project', function () {
     return view('content.modify-project');

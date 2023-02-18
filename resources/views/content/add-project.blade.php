@@ -6,8 +6,11 @@
 <a href={{ route('list-project') }} class="login-link col-sm-offset-9 ">
     <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
 </a>
+@if(session('status'))
+    {{session('status')}}
+@endif
 <div class="form-three widget-shadow">
-    <form class="form-horizontal" id="addProjectForm">
+    <form class="form-horizontal" id="addProjectForm" action="{{ url('add-project') }}" method="POST">
         @csrf
         <div class="form-group">
             <label for="focusedinput" class="col-sm-2 control-label">Titre<span class="required"> *</span></label>
@@ -38,7 +41,7 @@
             <div class="col-sm-8">
                 <select name="convention" class="form-control1">
                     <option selected value="" disabled>Select</option>
-                    <option>convention 1</option>
+                    <option value="1">convention 1</option>
                     <option>convention 2</option>
                     <option>convention 3</option>
                     <option>convention 4</option>
@@ -61,7 +64,7 @@
         <div class="form-group">
             <label for="focusedinput" class="col-sm-2 control-label">Taux d'avancement<span class="required"> *</span></label>
             <div class="col-sm-7">
-                <input type="range" class="form-range " min="0" max="100" id="advancementRange" value=0>
+                <input type="range" name="progress" class="form-range " min="0" max="100" id="advancementRange" value=0>
             </div>
             <span class="col-sm-1" id="advancementVal">0%</span>
         </div>

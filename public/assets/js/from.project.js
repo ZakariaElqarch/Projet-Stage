@@ -75,7 +75,7 @@ $(function () {
         rules: {
             title: {
                 required: true,
-                max: 255
+                //max: 255
               },
             validationDate: "required",
             budget: "required",
@@ -87,7 +87,7 @@ $(function () {
         messages: {
             title: {
                 required: "Title is required",
-                max: "255 max"
+                //max: "255 max"
               },
             validationDate: "validation date is required",
             budget: "budget is required",

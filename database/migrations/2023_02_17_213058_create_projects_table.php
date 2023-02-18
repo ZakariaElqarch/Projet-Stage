@@ -16,15 +16,15 @@ return new class extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
             $table->char('title', 255);
-            $table->date('start_date');
-            $table->date('end_date');
+            $table->char('validationDate', 255);
             $table->char('budget', 255);
+            $table->foreignId('convID')
+                ->constrained('conventions')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->char('phase', 20);
             $table->integer('progress');
-            $table->foreignId('convID')
-                  ->constrained('conventions')
-                  ->onDelete('cascade')
-                  ->onUpdate('cascade');
+            $table->timestamps();
         });
     }
 
@@ -38,6 +38,3 @@ return new class extends Migration
         Schema::dropIfExists('projects');
     }
 };
-
-
-

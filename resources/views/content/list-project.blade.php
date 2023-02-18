@@ -21,16 +21,17 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($project as $data)
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Projet1</td>
-                    <td>10/12/2022 - 23/10/2023</td>
+                    <th scope="row">{{$data->id}}</th>
+                    <td>{{$data->title}}</td>
+                    <td>{{$data->validationDate}}</td>
                     <td>
                         <div class="progress progress-striped active">
-                            <div class="bar  blue" style="width: 80%;"></div>
-                        </div><span class="pull-right">80% </span>
+                            <div class="bar  blue" style="width:{{$data->progress}}%"></div>
+                        </div><span class="pull-right">{{$data->progress}}% </span>
                     </td>
-                    <td>Conv 1</td>
+                    <td>{{$data->convID}}</td>
                     <td class="d-flex">
                         <a class="mx-1" href="{{ route('project-detail') }}"><button class="btn fa fa-eye text-success">
                             </button></a>
@@ -40,42 +41,7 @@
                     </td>
 
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Projet 2</td>
-                    <td>10/12/2022 - 23/10/2023</td>
-                    <td>
-                        <div class="progress progress-striped active">
-                            <div class="bar  blue" style="width: 40%;"></div>
-                        </div><span class="pull-right">40% </span>
-                    </td>
-                    <td>Conv 1</td>
-                    <td class="d-flex">
-                        <a class="mx-1" href="{{ route('list-project') }}"><button class="btn fa fa-eye text-success">
-                            </button></a>
-                        <a class="mx-1" href="#"><button class="btn fa fa-edit text-primary"></button></a>
-                        <a class="mx-1" href="#"><button class="btn fa fa-trash-o text-danger" onclick="return confirm('Etes-vous sûr de supprimer ce client?')"></button>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Projet 3</td>
-                    <td>10/12/2022 - 23/10/2023</td>
-                    <td>
-                        <div class="progress progress-striped active">
-                            <div class="bar  blue" style="width: 100%;"></div>
-                        </div><span class="pull-right">100% </span>
-                    </td>
-                    <td>Conv 2</td>
-                    <td class="d-flex">
-                        <a class="mx-1" href="{{ route('list-project') }}"><button class="btn fa fa-eye text-success">
-                            </button></a>
-                        <a class="mx-1" href="#"><button class="btn fa fa-edit text-primary"></button></a>
-                        <a class="mx-1" href="#"><button class="btn fa fa-trash-o text-danger" onclick="return confirm('Etes-vous sûr de supprimer ce client?')"></button>
-                        </a>
-                    </td>
-                </tr>
+                @endforeach
 
             </tbody>
         </table>
