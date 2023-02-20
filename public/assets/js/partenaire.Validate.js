@@ -27,9 +27,8 @@ $(".commune-form").validate({
     },
     phone: {
       required: true,
-      minlength: 10,
-      maxlength: 10,
-      number: true,
+      minlength: 14,
+      maxlength: 14,
       checkTel:true
     }
   }

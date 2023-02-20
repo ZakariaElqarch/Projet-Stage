@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Gestion des conventions</title>
 
     {{-- start css library --}}
@@ -13,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\vendors\css\bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\vendors\css\datepicker.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\vendors\css\toastify.css') }}">
+    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets\vendors\css\toastr.css') }}"> --}}
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\vendors\css\jquery.dataTables.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\vendors\css\jquery-ui.theme.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets\vendors\css\style.css') }}">
@@ -51,7 +53,7 @@
     <script src="{{ asset('assets\vendors\js\bootstrap.js') }}"></script>
     <script src="{{ asset('assets\vendors\js\classie.js') }}"></script>
     <script src="{{ asset('assets\vendors\js\jquery.mask.js') }}"></script>
-    {{-- <script src="{{ asset('assets\vendors\js\jquery.nicescroll.js') }}"></script> --}}
+    {{-- <script src="{{ asset('vendor\flasher\flasher-toastr.min.js') }}"></script> --}}
     <script src="{{ asset('assets\vendors\js\moment.js') }}"></script>
     <script src="{{ asset('assets\vendors\js\jquery-ui.js') }}"></script>
     <script src="{{ asset('assets\vendors\js\metisMenu.min.js') }}"></script>

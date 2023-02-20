@@ -6,7 +6,7 @@
 <div id="page-wrapper">
 
 
-  <a href={{ route('list-partenaire') }}>
+  <a href={{ route('partenaire.store') }}>
     <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
   </a>
   <h3 class="title1">Partenaire</h3>
@@ -43,4 +43,4 @@
 <link rel="stylesheet" href="{{ asset('assets\css\partenaire.css') }}">
 <script src="{{ asset('assets/vendors/js/jquery-1.11.1.min.js') }}"></script>
 <script src="{{ asset('assets\js\commune.Validate.js') }}"></script>
-@endsection;
+@endsection

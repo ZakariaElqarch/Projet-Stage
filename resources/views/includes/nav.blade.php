@@ -7,7 +7,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('list-convention') }}"><i class="bi bi-file-text nav_icon"></i>Convention </a>
+                    <a href="{{ route('convention.index') }}"><i class="bi bi-file-text nav_icon"></i>Convention </a>
                 </li>
 
                 <li>
@@ -16,18 +16,18 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('list-devision') }}"><i class="bi bi-building nav_icon"></i>Devision </a>
+                    <a href="{{ route('division.index') }}"><i class="bi bi-building nav_icon"></i>Devision </a>
                 </li>
 
                 <li>
-                    <a href="{{ route('list-service') }}"><i class="bi bi-house-gear nav_icon"></i>Service </a>
+                    <a href="{{ route('service.index') }}"><i class="bi bi-house-gear nav_icon"></i>Service </a>
 
                 </li>
                 <li>
-                    <a href="{{ route('list-commune') }}"><i class="bi bi-buildings nav_icon"></i>commune</a>
+                    <a href="{{ route('commune.index') }}"><i class="bi bi-buildings nav_icon"></i>commune</a>
                 </li>
                 <li>
-                    <a href="{{ route('list-partenaire') }}"><i class="bi bi-people-fill nav_icon"></i>Partenaire</a>
+                    <a href="{{ route('partenaire.index') }}"><i class="bi bi-people-fill nav_icon"></i>Partenaire</a>
                 </li>
             </ul>
         </nav>

@@ -5,13 +5,17 @@
 
 <div id="page-wrapper">
 
-    <a href={{ route('list-convention') }}>
-      <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
-    </a>
-    <h3 class="title1">Convention</h3>
+  <a href={{ route('convention.store') }}>
+    <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
+  </a>
+
+
+
+  <h3 class="title1">Convention</h3>
 
   <div class="form-three widget-shadow">
-    <form class="form-horizontal Convention-form">
+    <form action="{{ route('convention.store') }}" method="POST" class="form-horizontal Convention-form">
+      @csrf
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class="errortitre col-sm-8">
@@ -20,8 +24,8 @@
       </div>
       <div class="form-group">
         <label class="col-sm-3 control-label">Date de debut - fin: <span class="required"> *</span></label>
-        <div class="col-sm-8"> 
-          <input type="text" class="form-control1" name="Validity" id="Validity" placeholder="date de validiter" value="" />
+        <div class="col-sm-8">
+          <input type="text" class="form-control1" name="validity" id="Validity" placeholder="date de validiter" />
         </div>
       </div>
       <div class="form-group">
@@ -34,48 +38,45 @@
       <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">Division:<span class="required">
             *</span></label>
-        <div class="col-sm-8 errorDivision"><select multiple name="SelectDivision" id="division" class="form-control1">
+        <div class="col-sm-8 errorDivision"><select name="SelectDivision" id="SelectDivision" class="form-control1">
+            @foreach ($divisions as $division )
 
-            <option value="division 1">division 1.</option>
-            <option value="division 2">division 2</option>
-            <option value="division 3.">division 3.</option>
-            <option value="division 4.">division 4.</option>
+
+            <option value="{{ $division->id }}">{{ $division->titre }}</option>
+            @endforeach
           </select>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="selector1" class="col-sm-3 control-label">S ervice :<span class="required">
+        <label for="selector1" class="col-sm-3 control-label">Service :<span class="required">
             *</span></label>
-        <div class="col-sm-8 errorService"><select multiple name="SelectService" id="service" class="form-control1">
-         
-            <option value="service 1.">service 1.</option>
-            <option value="service 2">service 2</option>
-            <option value="service 3">service 3.</option>
-            <option value="service 4">service 4.</option>
+        <div class="col-sm-8 errorService">
+          <select multiple name="SelectService[]" id="SelectService"
+           data-live-search="true" data-url="{{ route('get-related-data', ':id') }}"
+           class="form-control1">
           </select>
         </div>
       </div>
 
       <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">Les Partenaires:<span class="required"> *</span></label>
-        <div class="col-sm-8 errorPartenaire"><select multiple name="SelectPartenaire" id="Partenaires" class="form-control1">
-          
-            <option value="Partenaire 1">Partenaire 1.</option>
-            <option value="Partenaire 2">Partenaire 2</option>
-            <option value="Partenaire 3">Partenaire 3.</option>
-            <option value="Partenaire 4">Partenaire 4.</option>
+        <div class="col-sm-8 errorPartenaire"><select multiple name="SelectPartenaire[]" id="SelectPartenaire"
+            class="form-control1">
+            @foreach ($partenaires as $partenaire)
+            <option value="{{ $partenaire->id}}">{{ $partenaire->titre }} </option>
+            @endforeach
           </select>
         </div>
       </div>
+
       <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">Les Communes:<span class="required"> *</span></label>
-        <div class="col-sm-8 errorCommunes"><select multiple name="SelectCommunes" id="Communes" class="form-control1">
-          
-            <option value="Partenaire 1">Communes 1.</option>
-            <option value="Partenaire 2">Communes 2</option>
-            <option value="Partenaire 3">Communes 3.</option>
-            <option value="Partenaire 4">Communes 4.</option>
+        <div class="col-sm-8 errorCommunes"><select multiple name="SelectCommunes[]" id="Communes"
+            class="form-control1">
+            @foreach ( $communes as $commune )
+            <option value="{{ $commune->id }}">{{ $commune->titre }}</option>
+            @endforeach
           </select>
         </div>
       </div>
@@ -90,5 +91,17 @@
 </div>
 <link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
 <script src="{{ asset('assets\vendors\js\jquery-1.11.1.min.js') }}"></script>
+<script src="{{ asset('assets\js\convention-Form.js') }}"></script>
 <script src="{{ asset('assets\js\convention.js') }}"></script>
-@endsection;
+
+<script>
+
+
+
+
+
+
+</script>
+
+
+@endsection

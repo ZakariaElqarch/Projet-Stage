@@ -94,3 +94,6 @@ th{
     margin-left: auto;
     margin-left: auto;
 }
+.toast-success{
+    background: #6164C1;
+}
