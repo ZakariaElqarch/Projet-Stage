@@ -65,7 +65,8 @@ class projectController extends Controller
      */
     public function edit($id)
     {
-        //
+        $project = project::find($id);
+        return view('content.edit-project' ,compact('project'));
     }
 
     /**
@@ -77,7 +78,15 @@ class projectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $project = project::find($id);
+        $project->title = $request->title;
+        $project->validationDate = $request->validationDate;
+        $project->budget = $request->budget;
+        $project->convID = $request->convention;
+        $project->phase = $request->phase;
+        $project->progress = $request->progress;
+        $project->update();
+        return redirect('edit-project/'.$id)->with('status','updated');
     }
 
     /**
@@ -88,6 +97,8 @@ class projectController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = project::find($id);
+        $project->delete();
+        return redirect('list-project')->with('status','updated');
     }
 }

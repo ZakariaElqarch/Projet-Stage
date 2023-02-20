@@ -41,11 +41,17 @@ Route::post('/add-project', [projectController::class, 'store']);//->middleware(
 
 Route::get('/list-project', [projectController::class, 'index'])->name('list-project');//->middleware(['auth0.authenticate']);
 
-Route::get('/modify-project', function () {
-    return view('content.modify-project');
-})->name('modify-project');
+
+Route::get('/edit-project/{id}', [projectController::class, 'edit'])->name('edit-project');//->middleware(['auth0.authenticate']);
+Route::put('/edit-project/{id}', [projectController::class, 'update']);
+
+Route::get('/delete-project/{id}', [projectController::class, 'destroy'])->name('delete-project');
+
 
 Route::get('/project-detail', function () {
     return view('content.project-detail');
 })->name('project-detail');
+
+
+
 

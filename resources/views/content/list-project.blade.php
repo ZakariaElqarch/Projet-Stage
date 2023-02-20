@@ -29,14 +29,18 @@
                     <td>
                         <div class="progress progress-striped active">
                             <div class="bar  blue" style="width:{{$data->progress}}%"></div>
-                        </div><span class="pull-right">{{$data->progress}}% </span>
+                        </div><span class="pull-right">{{$data->progress}}%</span>
                     </td>
                     <td>{{$data->convID}}</td>
                     <td class="d-flex">
-                        <a class="mx-1" href="{{ route('project-detail') }}"><button class="btn fa fa-eye text-success">
-                            </button></a>
-                        <a class="mx-1" href="{{ route('modify-project') }}"><button class="btn fa fa-edit text-primary"></button></a>
-                        <a class="mx-1" href="#"><button class="btn fa fa-trash-o text-danger" onclick="return confirm('Etes-vous sûr de supprimer ce client?')"></button>
+                        <a class="mx-1" href="{{ route('project-detail') }}">
+                            <button class="btn fa fa-eye text-success"></button>
+                        </a>
+                        <a class="mx-1" href="{{ route('edit-project',$data->id)}}">
+                            <button class="btn fa fa-edit text-primary"></button>
+                        </a>
+                        <a class="mx-1"  href="{{ route('delete-project',$data->id)}}" class="btn fa fa-trash-o text-danger">
+                            <button class="btn fa fa-trash-o text-danger" ></button>
                         </a>
                     </td>
 
