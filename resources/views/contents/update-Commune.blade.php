@@ -17,7 +17,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class=" col-sm-8">
-          <input type="text" name="titre" value="{{ $communes->titre }}" class="form-control1">
+          <input type="text" name="title" value="{{ $communes->title }}" class="form-control1">
         </div>
       </div>
 
@@ -31,7 +31,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">N-Tel<span class="required"> *</span></label>
         <div class="col-sm-8">
-          <input type="tel" value="{{ $communes->tel }}" name="phone" class="form-control1 phone">
+          <input type="tel" value="{{ $communes->phone }}" name="phone" class="form-control1 phone">
         </div>
       </div>
       <div class="col-sm-offset-2">

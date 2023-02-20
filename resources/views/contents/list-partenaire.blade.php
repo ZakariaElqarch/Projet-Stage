@@ -31,9 +31,9 @@
                                               
                                                 <tr>
                                                         <th scope="row">{{ $partenaire->id }}</th>
-                                                        <td>{{ $partenaire->titre }}</td>
+                                                        <td>{{ $partenaire->title }}</td>
                                                         <td>{{ $partenaire->email }}</td>
-                                                        <td>{{ $partenaire->tel }}</td>
+                                                        <td>{{ $partenaire->phone }}</td>
                                                         <td class="d-flex">
                                                                 <form action="{{route('partenaire.destroy',$partenaire->id) }}" method="post">
                                                                         @csrf

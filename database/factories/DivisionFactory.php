@@ -18,10 +18,10 @@ class DivisionFactory extends Factory
     {
         return [
             //
-           'titre'=>'Division'.random_int(1,10),
+           'title'=>'Division'.random_int(1,10),
            'chef'=>fake()->name(),
            'email'=>fake()->email(),
-           'tel'=>fake()->phoneNumber()
+           'phone'=>fake()->phoneNumber()
         ];
     }
 }

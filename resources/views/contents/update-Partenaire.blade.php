@@ -17,21 +17,21 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class=" col-sm-8">
-          <input type="text" name="titre" value="Titre 1" class="form-control1">
+          <input type="text" name="title" value="{{ $partenaires->title }}" class="form-control1">
         </div>
       </div>
 
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">E-mail<span class="required"> *</span></label>
         <div class="col-sm-8">
-          <input type="email" name="mail" value="test@gmail.com" class="form-control1">
+          <input type="email" name="mail" value="{{ $partenaires->email }}" class="form-control1">
         </div>
       </div>
 
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">N-Tel<span class="required"> *</span></label>
         <div class="col-sm-8">
-          <input type="tel" value="0512345678" name="phone" class="form-control1 phone">
+          <input type="tel" value="{{ $partenaires->phone }}" name="phone" class="form-control1 phone">
         </div>
       </div>
       <div class="col-sm-offset-2">

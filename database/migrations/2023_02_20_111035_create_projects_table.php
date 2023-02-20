@@ -21,7 +21,7 @@ return new class extends Migration
                   ->onDelete('cascade')
                   ->onUpdate('cascade');
             $table->char('title', 255);
-            $table->char('validationDate', 255);
+            $table->char('validity', 255);
             $table->char('budget', 255);
             $table->char('phase', 20);
             $table->integer('progress');

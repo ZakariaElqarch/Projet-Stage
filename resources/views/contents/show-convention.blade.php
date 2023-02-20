@@ -12,7 +12,7 @@
         </a>
         <h3 class="title1">Convention</h3>
         <div class="panel-body widget-shadow">
-            <p> {{ $conventions->titre }} </p>
+            <p> {{ $conventions->title }} </p>
             <p> {{ $conventions->date_Validiter }} </p>
         </div>
     </div>

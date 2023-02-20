@@ -17,10 +17,10 @@ return new class extends Migration
         
                 $table->id();
                 $table->foreignId('id_division')->references('id')->on('divisions')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
-                $table->string('titre',255);
+                $table->string('title',255);
                 $table->string('chef',255);
                 $table->string('email');
-                $table->string('tel');
+                $table->string('phone');
                 $table->timestamps();
           
     

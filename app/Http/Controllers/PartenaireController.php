@@ -44,9 +44,9 @@ class PartenaireController extends Controller
         //
         
        Partenaire::create([
-            "titre" => $request->titre,
+            "title" => $request->title,
             "email" => $request->mail,
-            "tel" => $request->phone
+            "phone" => $request->phone
         ]);
         return redirect()->route('partenaire.store')->with('success', 'Data was saved successfully!');
     }
@@ -88,9 +88,9 @@ class PartenaireController extends Controller
     {
         //
         $update = [
-            "titre" => $request->titre,
+            "title" => $request->title,
             "email" => $request->mail,
-            "tel" => $request->phone,
+            "phone" => $request->phone,
         ];
         Partenaire::where('id', $id)->update($update);
         return redirect()->route('partenaire.store')->with('success', 'Update was successful!');

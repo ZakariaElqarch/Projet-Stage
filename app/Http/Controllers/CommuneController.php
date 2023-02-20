@@ -40,9 +40,10 @@ class CommuneController extends Controller
     {
         //
         Commune::create([
-            'titre'=>$request->titre,
-            'tel'=>$request->phone,
-            'email'=>$request->mail
+            'title'=>$request->title,
+            
+            'email'=>$request->mail,
+            'phone'=>$request->phone
         ]);
         return redirect()->route('commune.store')->with('success', 'Data has been saved successfully!');
     }
@@ -84,9 +85,9 @@ class CommuneController extends Controller
     {
         //
         $update = [
-            "titre" => $request->titre,
+            "title" => $request->title,
             "email" => $request->mail,
-            "tel" => $request->phone,
+            "phone" => $request->phone,
         ];
         Commune::where('id', $id)->update($update);
         return redirect()->route('commune.store')->with('success', 'Update was successful!');

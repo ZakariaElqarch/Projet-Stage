@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('divisions', function (Blueprint $table) {
             $table->id();
-            $table->string('titre',255);
+            $table->string('title',255);
             $table->string('chef',255);
             $table->string('email');
-            $table->string('tel');
+            $table->string('phone');
             $table->timestamps();
       
 

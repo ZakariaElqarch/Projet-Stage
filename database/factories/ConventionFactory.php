@@ -19,8 +19,8 @@ class ConventionFactory extends Factory
     {
         return [
             //
-            'titre' => 'Convention'.random_int(1,10),
-            'date_Validiter' => fake()->date()."-".fake()->date(),
+            'title' => 'Convention'.random_int(1,10),
+            'validity' => fake()->date()."-".fake()->date(),
             'budget' =>random_int(100000,100000000)."DH",
            
         ];

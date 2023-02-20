@@ -45,10 +45,10 @@ class serviceController extends Controller
         
         $Service = new Service;
         $Service->id_division = $request->selectdivision;
-        $Service->titre = $request->titre;
+        $Service->title = $request->title;
         $Service->chef = $request->chef;
         $Service->email = $request->mail;
-        $Service->tel = $request->phone;
+        $Service->phone = $request->phone;
          
         $Service->save();
         return redirect()->route('service.store')->with('success', 'Data has been saved successfully!');
@@ -96,10 +96,10 @@ class serviceController extends Controller
       
         $update = [
            'id_division' =>$request->selectdivision,
-            'titre' => $request->titre,
+            'title' => $request->title,
            'chef' => $request->chef,
            'email' => $request->mail,
-           'tel' => $request->phone,
+           'phone' => $request->phone,
            
         ];
         Service::where('id', $id)->update($update);

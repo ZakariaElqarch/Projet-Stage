@@ -9,7 +9,7 @@
           </a>
         <h3 class="title1">Commune</h3>
         <div class="panel-body widget-shadow">
-           {{ $communes->titre }}
+           {{ $communes->title }}
            {{ $communes->tel }}
         </div>
     </div>

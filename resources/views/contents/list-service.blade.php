@@ -35,10 +35,10 @@
                      
                         <tr>
                             <th scope="row">{{ $service->id }}</th>
-                            <td> {{ $service->titre }}</td>
+                            <td> {{ $service->title }}</td>
                             <td>{{ $service->chef }}</td>
                             <td>{{ $service->email }}</td>
-                            <td>{{ $service->tel }}</td>
+                            <td>{{ $service->phone }}</td>
                             <td class="d-flex">
                                 <form action="{{ route('service.destroy',$service->id) }}" method="post">
                                 @csrf

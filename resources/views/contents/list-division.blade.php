@@ -27,13 +27,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($Alldivisionss as $division)
+                        @foreach ($Alldivisions as $division)
                             <tr class="table-active">
                             <th  scope="row">{{$division->id}}</th>
-                            <td> {{$division->titre}}</td>
+                            <td> {{$division->title}}</td>
                             <td> {{$division->chef}}</td>
                             <td> {{$division->email}}</td>
-                            <td> {{$division->tel}}</td>
+                            <td> {{$division->phone}}</td>
                             <td class="d-flex">
                                 <form action="{{ route('division.destroy',$division->id) }}" method="post">
                                 @csrf

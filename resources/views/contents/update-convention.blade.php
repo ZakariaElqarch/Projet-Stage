@@ -12,13 +12,13 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre</label>
         <div class="col-sm-8">
-          <input type="text" name="titre" class="form-control1" id="focusedinput" value="{{ $conventions->titre }}" placeholder="Titre">
+          <input type="text" name="title" class="form-control1" id="focusedinput" value="{{ $conventions->titre }}" placeholder="Titre">
         </div>
       </div>
       <div class="form-group">
         <label class="col-sm-3 control-label">Date debut / fin :</label>
         <div class="col-sm-8">
-          <input type="text" name="validity" id="Validity" value="{{ $conventions->date_Validiter }}" class="form-control1">
+          <input type="text" name="validity" id="Validity" value="{{ $conventions->Validity }}" class="form-control1">
         </div>
       </div>
       <div class="form-group">

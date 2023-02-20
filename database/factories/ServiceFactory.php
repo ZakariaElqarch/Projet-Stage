@@ -19,10 +19,10 @@ class ServiceFactory extends Factory
         return [
             //
             'id_division'=>random_int(1,10),
-           'titre'=>'Service'.random_int(1,10),
+           'title'=>'Service'.random_int(1,10),
            'chef'=>fake()->name(),
            'email'=>fake()->email(),
-           'tel'=>fake()->phoneNumber()
+           'phone'=>fake()->phoneNumber()
         ];
     }
 }

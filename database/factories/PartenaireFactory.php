@@ -18,9 +18,9 @@ class PartenaireFactory extends Factory
     {
         return [
             //
-            'titre'=>'Partenaire'.random_int(1,10),
+            'title'=>'Partenaire'.random_int(1,10),
             'email'=>fake()->unique()->safeEmail(),
-            'tel'=>fake()->PhoneNumber(),
+            'phone'=>fake()->PhoneNumber(),
         ];
     }
 }

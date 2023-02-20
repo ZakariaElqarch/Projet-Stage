@@ -13,7 +13,7 @@ $(document).ready(function() {
           success: function(data) {
             $('#SelectService').empty();
             $.each(data, function(index, ServiceData) {
-              $('#SelectService').append('<option value="' + ServiceData.id + '">' + ServiceData.titre + '</option>');
+              $('#SelectService').append('<option value="' + ServiceData.id + '">' + ServiceData.title + '</option>');
             });
           }
         });

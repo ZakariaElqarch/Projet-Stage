@@ -37,8 +37,8 @@
                         @foreach ($conventions as $convention)
                         <tr>
                             <th scope="row">{{ $convention->id }}</th>
-                            <td>{{ $convention->titre }}</td>
-                            <td>{{ $convention->date_Validiter }}</td>
+                            <td>{{ $convention->title }}</td>
+                            <td>{{ $convention->validity}}</td>
                            
                            
                             <td>{{ $countProject }}</td>

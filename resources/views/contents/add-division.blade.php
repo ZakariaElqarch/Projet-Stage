@@ -17,7 +17,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class=" col-sm-8">
-          <input type="text" name="titre" class="form-control1"  placeholder="Titre">
+          <input type="text" name="title" class="form-control1"  placeholder="Titre">
         </div>
       </div>
 

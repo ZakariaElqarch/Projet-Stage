@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('communes', function (Blueprint $table) {
             $table->id();
-            $table->string('titre');
+            $table->string('title');
             $table->string('email');
-            $table->string('tel');
+            $table->string('phone');
             $table->timestamps();
         });
     }

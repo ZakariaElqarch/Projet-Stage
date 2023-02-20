@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('conventions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('titre', 255);
-            $table->string('date_Validiter');
+            $table->string('title', 255);
+            $table->string('validity');
             $table->string('budget', 1000);
             $table->timestamps();
         });

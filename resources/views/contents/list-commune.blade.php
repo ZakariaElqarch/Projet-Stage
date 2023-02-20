@@ -31,9 +31,9 @@
                         
                         <tr class="table-active">
                             <th scope="row">{{ $commune->id }}</th>
-                            <td>{{ $commune->titre }}</td>
+                            <td>{{ $commune->title }}</td>
                             <td>{{ $commune->email }}</td>
-                            <td>{{ $commune->tel }}</td>
+                            <td>{{ $commune->phone }}</td>
                             <td class="d-flex">
                                 <form action="{{ route('commune.destroy', $commune->id) }}" method="post">
                                     @csrf

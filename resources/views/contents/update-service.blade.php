@@ -18,7 +18,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class=" col-sm-8">
-          <input type="text" name="titre" class="form-control1" placeholder="Titre" value="{{ $services->titre }}">
+          <input type="text" name="title" class="form-control1" placeholder="Titre" value="{{ $services->title }}">
         </div>
       </div>
 
@@ -35,7 +35,7 @@
 		<select name="selectdivision" id="division" class="form-control1">
       <option value="">--choose option--</option>
          @foreach ($divisions as $division )
-         <option value="{{  $division->id }}">{{  $division->titre }}</option>
+         <option value="{{  $division->id }}">{{  $division->title }}</option>
          @endforeach
 	   </select>
         </div>
@@ -52,7 +52,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">N-tel<span class="required"> *</span></label>
         <div class="col-sm-8">
-          <input type="tel" name="phone"  class="form-control1 phone" placeholder="tel" value="{{ $services->tel }}">
+          <input type="tel" name="phone"  class="form-control1 phone" placeholder="tel" value="{{ $services->phone }}">
         </div>
       </div>
       <div class="col-sm-offset-2">

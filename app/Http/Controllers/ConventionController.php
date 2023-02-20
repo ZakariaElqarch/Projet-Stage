@@ -25,16 +25,21 @@ class ConventionController extends Controller
     public function index()
     {
         //
+        
         $conventions = Convention::all();
-        // $countProject =DB::select('SELECT count(id) FROM projects where id_convention=:id ');
-        $countProjects = Convention::withCount('projects')->get();
-      foreach($countProjects as $countProject ){
-        $countProject =  $countProject->projects_count;
-      }
+        if(Convention::all()->count() > 0){
+            $countProjects = Convention::withCount('projects')->get();
+        foreach ($countProjects as $countProject) {
+            $countProject =  $countProject->projects_count;
+        }
+        }else{
+            $countProject=0;
+        }
+        
 
 
         return view('contents.list-convention')->with('conventions', $conventions)
-                ->with('countProject', $countProject);
+            ->with('countProject', $countProject);
     }
 
     /**
@@ -63,32 +68,13 @@ class ConventionController extends Controller
      */
     public function store(Request $request)
     {
-
-        // $convention= Convention::create([
-        //     "titre" => $request->titre,
-        //     "date_Validiter" => $request->validity,
-        //     "budget" => $request->budget
-        // ]);
-
         $id = DB::table('conventions')->insertGetId([
-            "titre" => $request->titre,
-            "date_Validiter" => $request->validity,
+            "title" => $request->title,
+            "validity" => $request->validity,
             "budget" => $request->budget,
-            'created_at'=>Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at'=>Carbon::now()->format('Y-m-d H:i:s')
+            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
-
-
-        // $SelectCommunes = $request->input('SelectCommunes');
-
-        // if (is_array($SelectCommunes)) {
-        //     $tagsArray = $SelectCommunes;
-        // } else {
-        //     $tagsArray = explode(',', $SelectCommunes);
-        // }
-
-
-
 
 
         $SelectCommunes = $request->input('SelectCommunes');
@@ -119,10 +105,6 @@ class ConventionController extends Controller
             ]);
         }
 
-
-
-
-
         $SelectService = $request->input('SelectService');
         if (is_array($SelectService)) {
             $ServiceArray = $SelectService;
@@ -136,8 +118,6 @@ class ConventionController extends Controller
                 "id_service" => $ServiceId
             ]);
         }
-
-
 
         return redirect()->route('convention.store')->with('success', 'Data has been saved successfully!');
     }
@@ -179,10 +159,10 @@ class ConventionController extends Controller
     {
         //
         $update = [
-            "titre" => $request->titre,
-            "date_Validiter" => $request->validity,
+            "title" => $request->title,
+            "validity" => $request->validity,
             "budget" => $request->budget,
-            'updated_at'=>Carbon::now()->format('Y-m-d H:i:s')
+            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ];
         Convention::where('id', $id)->update($update);
         return redirect()->route('convention.store')->with('success', 'Update was successful!');

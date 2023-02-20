@@ -15,9 +15,9 @@ class divisionController extends Controller
     public function index()
     {
         //
-        $Alldivisionss = Division::all();
+        $Alldivisions = Division::all();
        
-        return view('contents.list-division')->with('Alldivisionss', $Alldivisionss);
+        return view('contents.list-division')->with('Alldivisions', $Alldivisions);
     }
 
     /**
@@ -42,7 +42,7 @@ class divisionController extends Controller
         //
         
     Division::create([
-            "titre" => $request->titre,
+            "title" => $request->title,
             "chef" => $request->chef,
             "email" => $request->mail,
             "tel" => $request->phone
@@ -88,10 +88,10 @@ class divisionController extends Controller
     {
         //
         $update = [
-            "titre" => $request->titre,
+            "title" => $request->title,
             "chef" => $request->chef,
             "email" => $request->mail,
-            "tel" => $request->phone
+            "phone" => $request->phone
         ];
         Division::where('id', $id)->update($update);
         return redirect()->route('division.store')->with('success', 'Update was successful!');

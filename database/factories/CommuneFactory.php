@@ -19,9 +19,9 @@ class CommuneFactory extends Factory
     {
         return [
             //
-           'titre'=>'Commune'.random_int(1,10),
+           'title'=>'Commune'.random_int(1,10),
            'email'=>fake()->unique()->safeEmail(),
-           'tel'=>fake()->PhoneNumber(),
+           'phone'=>fake()->PhoneNumber(),
         ];
     }
 }

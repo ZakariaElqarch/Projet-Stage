@@ -1,6 +1,5 @@
 @extends('layouts.layout');
 @section('content');
-@csrf
 
 
 <div id="page-wrapper">
@@ -17,7 +16,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class=" col-sm-8">
-          <input type="text" name="titre" class="form-control1"  placeholder="Titre">
+          <input type="text" name="title" class="form-control1"  placeholder="Titre">
         </div>
       </div>
 
@@ -53,7 +52,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">N-tel<span class="required"> *</span></label>
         <div class="col-sm-8">
-          <input type="tel" name="phone"  class="form-control1 phone" placeholder="tel">
+          <input type="tel" name="phone" class="form-control1 phone" placeholder="tel">
         </div>
       </div>
       <div class="col-sm-offset-2">

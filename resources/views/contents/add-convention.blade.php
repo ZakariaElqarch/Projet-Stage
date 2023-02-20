@@ -19,7 +19,7 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class="errortitre col-sm-8">
-          <input type="text" name="titre" class="form-control1" id="Titre" placeholder="Titre">
+          <input type="text" name="title" class="form-control1" id="Titre" placeholder="Titre">
         </div>
       </div>
       <div class="form-group">
@@ -42,7 +42,7 @@
             @foreach ($divisions as $division )
 
 
-            <option value="{{ $division->id }}">{{ $division->titre }}</option>
+            <option value="{{ $division->id }}">{{ $division->title }}</option>
             @endforeach
           </select>
         </div>
@@ -64,7 +64,7 @@
         <div class="col-sm-8 errorPartenaire"><select multiple name="SelectPartenaire[]" id="SelectPartenaire"
             class="form-control1">
             @foreach ($partenaires as $partenaire)
-            <option value="{{ $partenaire->id}}">{{ $partenaire->titre }} </option>
+            <option value="{{ $partenaire->id}}">{{ $partenaire->title }} </option>
             @endforeach
           </select>
         </div>
@@ -75,7 +75,7 @@
         <div class="col-sm-8 errorCommunes"><select multiple name="SelectCommunes[]" id="Communes"
             class="form-control1">
             @foreach ( $communes as $commune )
-            <option value="{{ $commune->id }}">{{ $commune->titre }}</option>
+            <option value="{{ $commune->id }}">{{ $commune->title }}</option>
             @endforeach
           </select>
         </div>
