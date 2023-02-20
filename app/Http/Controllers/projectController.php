@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\project;
+use App\Models\Convention;
 class projectController extends Controller
 {
     /**
@@ -24,7 +25,8 @@ class projectController extends Controller
      */
     public function create()
     {
-        return view('content.add-project');
+        $convention = Convention::all();
+        return view('content.add-project')->with('convention', $convention);
     }
 
     /**
@@ -41,7 +43,7 @@ class projectController extends Controller
         $project->budget = $request->budget;
         $project->convID = $request->convention;
         $project->phase = $request->phase;
-        $project->progress = $request->progress;
+        $project->progress = $request->progressVal;
         $project->save();
         return redirect('add-project')->with('status','added');
     }
@@ -54,7 +56,8 @@ class projectController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = project::find($id);
+        return view('content.show-project' ,compact('project'));
     }
 
     /**
@@ -66,7 +69,8 @@ class projectController extends Controller
     public function edit($id)
     {
         $project = project::find($id);
-        return view('content.edit-project' ,compact('project'));
+        $convention = Convention::all();
+        return view('content.edit-project')->with('project',$project)->with('convention', $convention);
     }
 
     /**
@@ -84,9 +88,9 @@ class projectController extends Controller
         $project->budget = $request->budget;
         $project->convID = $request->convention;
         $project->phase = $request->phase;
-        $project->progress = $request->progress;
+        $project->progress = $request->progressVal;
         $project->update();
-        return redirect('edit-project/'.$id)->with('status','updated');
+        return redirect('list-project')->with('status','updated');
     }
 
     /**

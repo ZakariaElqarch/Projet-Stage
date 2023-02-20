@@ -48,10 +48,7 @@ Route::put('/edit-project/{id}', [projectController::class, 'update']);
 Route::get('/delete-project/{id}', [projectController::class, 'destroy'])->name('delete-project');
 
 
-Route::get('/project-detail', function () {
-    return view('content.project-detail');
-})->name('project-detail');
-
+Route::get('/show-project/{id}', [projectController::class, 'show'])->name('show-project');
 
 
 

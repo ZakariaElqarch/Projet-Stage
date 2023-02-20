@@ -33,7 +33,7 @@
                     </td>
                     <td>{{$data->convID}}</td>
                     <td class="d-flex">
-                        <a class="mx-1" href="{{ route('project-detail') }}">
+                        <a class="mx-1" href="{{ route('show-project',$data->id) }}">
                             <button class="btn fa fa-eye text-success"></button>
                         </a>
                         <a class="mx-1" href="{{ route('edit-project',$data->id)}}">

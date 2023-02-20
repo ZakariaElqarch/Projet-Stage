@@ -34,24 +34,9 @@ $(function () {
         $(this).val('');
     });
 
-    // $('#test').on('click', function () {
-    //     Toastify({
-    //         text: "This is a toast",
-    //         duration: 5000,
-    //         newWindow: true,
-    //         close: true,
-    //         className: "error",
-    //         gravity: "top", // `top` or `bottom`
-    //         position: "center", // `left`, `center` or `right`
-    //         stopOnFocus: false, // Prevents dismissing of toast on hover
-    //         style: {
-    //             background: "red",
-    //             width: "500px"
-    //         },
-    //         onClick: function () { console.log("toastr") } // Callback after click
-    //     }).showToast();
-
-    // });
+     $('#test').on('click', function () {
+         console.log($("#advancementRange").val())
+    });
     $('#test2').on('click', function () {
        /* Toastify({
             text: "enregistrer avec succes",
@@ -100,22 +85,26 @@ $(function () {
 
     $("#advancementRange").on('change', function(){
         
-        $("#advancementVal").html($("#advancementRange").val()+"%")
+        $("#advancementVal").html($("#advancementRange").val()+"%");
+        $("#progressVal").val($("#advancementRange").val());
     })
     $("#phase").on('change', function(){
        
          let phase = $("#phase").val();
          if(phase == "initiale"){
-            $("#advancementRange").val(0);
+            $("#advancementRange").val('0');
+            $("#progressVal").val('0');
             $("#advancementRange").prop('disabled', true);
             $("#advancementVal").html($("#advancementRange").val()+"%")
             
          }else if (phase == "realise"){
-            $("#advancementRange").val(100);
+            $("#advancementRange").val('100');
+            $("#progressVal").val('100');
             $("#advancementRange").prop('disabled', true);
             $("#advancementVal").html($("#advancementRange").val()+"%")
          }else{
             $("#advancementRange").prop('disabled', false);
          }
     })
+    
 });

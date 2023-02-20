@@ -41,10 +41,9 @@
             <div class="col-sm-8">
                 <select name="convention" class="form-control1">
                     <option selected value="" disabled>Select</option>
-                    <option value="1">convention 1</option>
-                    <option>convention 2</option>
-                    <option>convention 3</option>
-                    <option>convention 4</option>
+                    @foreach ($convention as $data )
+                    <option value="{{ $data->id }}">{{ $data->titre }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
@@ -64,7 +63,8 @@
         <div class="form-group">
             <label for="focusedinput" class="col-sm-2 control-label">Taux d'avancement<span class="required"> *</span></label>
             <div class="col-sm-7">
-                <input type="range" name="progress" class="form-range " min="0" max="100" id="advancementRange" value=0>
+                <input type="range" name="progress" class="form-range " min="0" max="100" id="advancementRange" >
+                <input type="hidden" name="progressVal" id="progressVal">
             </div>
             <span class="col-sm-1" id="advancementVal">0%</span>
         </div>
@@ -75,7 +75,7 @@
         <div class="col-md-offset-8 btn-div">
             <button type="reset" class="btn btn-primary costum-btn">Vider</button>
             <button type="submit" class="btn btn-primary costum-btn" id="enregister">Enregitrer</button>
-            <!-- <input type="button" class="btn btn-primary costum-btn" id="test" /> -->
+            <input type="button" class="btn btn-primary costum-btn" id="test"  /> 
             <!-- <input type="button"  class="btn btn-primary costum-btn" id="test2"/>  -->
         </div>
     </form>

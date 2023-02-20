@@ -43,10 +43,10 @@
             <div class="col-sm-8">
                 <select name="convention" class="form-control1">
                     <option  value="" disabled>Select</option>
-                    <option value="1" {{$project->convID == "1" ? 'selected' : ''}}>convention 1</option>
-                    <option value="2" {{$project->convID == "2" ? 'selected' : ''}}>convention 2</option>
-                    <option value="3" {{$project->convID == "3" ? 'selected' : ''}}>convention 3</option>
-                    <option value="4" {{$project->convID == "4" ? 'selected' : ''}}>convention 4</option>
+                    @foreach ($convention as $data )
+                    <option value="{{ $data->id }}" {{$project->convID == $data->id ? 'selected' : ''}}>{{ $data->titre }}</option>
+                    @endforeach
+                
                 </select>
             </div>
         </div>
@@ -67,6 +67,7 @@
             <label for="focusedinput" class="col-sm-2 control-label">Taux d'avancement<span class="required"> *</span></label>
             <div class="col-sm-7">
                 <input type="range" name="progress" class="form-range " min="0" max="100" id="advancementRange" value="{{$project->progress}}">
+                <input type="hidden" name="progressVal" id="progressVal">
             </div>
             <span class="col-sm-1" id="advancementVal">{{$project->progress}}%</span>
         </div>
