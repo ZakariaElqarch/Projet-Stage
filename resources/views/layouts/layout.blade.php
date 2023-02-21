@@ -64,6 +64,9 @@
     <!--  tostify -->
     <script src="{{asset('assets/vendors/js/toastify-js.js')}}"></script>
     <link href="{{asset('assets/vendors/css/toastify.min.css')}}" rel="stylesheet">
+
+    {{-- profile css --}}
+    
     
     @vite('resources/js/app.js')
 </head>

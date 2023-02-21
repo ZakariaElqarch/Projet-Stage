@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\project;
+use App\Models\Project;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Convention;
 class projectController extends Controller
@@ -15,7 +15,7 @@ class projectController extends Controller
      */
     public function index()
     {
-        $project = project::all();
+        $project = Project::all();
         $convention = Convention::all();
         return view('content.list-project')->with('convention', $convention)->with('project', $project);
     }
@@ -39,7 +39,7 @@ class projectController extends Controller
      */
     public function store(Request $request)
     {
-        $project = new project;
+        $project = new Project;
         $project->title = $request->title;
         $project->validationDate = $request->validationDate;
         $project->budget = $request->budget;
@@ -73,8 +73,9 @@ class projectController extends Controller
      */
     public function show($id)
     {
-        $project = project::find($id);
-        return view('content.show-project' ,compact('project'));
+        $project = Project::find($id);
+        $convention = Convention::find($project->convID);
+        return view('content.show-project')->with('convention', $convention)->with('project', $project);
     }
 
     /**
@@ -85,7 +86,7 @@ class projectController extends Controller
      */
     public function edit($id)
     {
-        $project = project::find($id);
+        $project = Project::find($id);
         $convention = Convention::all();
         return view('content.edit-project')->with('project',$project)->with('convention', $convention);
     }
@@ -99,7 +100,7 @@ class projectController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $project = project::find($id);
+        $project = Project::find($id);
         $project->title = $request->title;
         $project->validationDate = $request->validationDate;
         $project->budget = $request->budget;
@@ -133,7 +134,7 @@ class projectController extends Controller
      */
     public function destroy($id)
     {
-        $project = project::find($id);
+        $project = Project::find($id);
         $project->delete();
         return redirect('list-project')->with('status','updated');
     }
