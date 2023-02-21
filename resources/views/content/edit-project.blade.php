@@ -66,8 +66,7 @@
         <div class="form-group">
             <label for="focusedinput" class="col-sm-2 control-label">Taux d'avancement<span class="required"> *</span></label>
             <div class="col-sm-7">
-                <input type="range" name="progress" class="form-range " min="0" max="100" id="advancementRange" value="{{$project->progress}}">
-                <input type="hidden" name="progressVal" id="progressVal">
+                <input type="range" name="progress" class="form-range " min="0" max="100" id="advancementRange" value="{{$project->progress}}" {{$project->phase == "initiale" ? 'disabled' : ''}} {{$project->phase == "realise" ? 'disabled' : ''}}>
             </div>
             <span class="col-sm-1" id="advancementVal">{{$project->progress}}%</span>
         </div>

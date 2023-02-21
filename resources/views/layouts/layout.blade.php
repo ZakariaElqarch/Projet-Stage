@@ -44,7 +44,7 @@
 
     <!-- Metis Menu -->
     <script src="{{asset('assets/vendors/js/metisMenu.min.js')}}"></script>
-    <script src="{{asset('assets/vendors/js/custom.js')}}"></script>
+    <script src="{{asset('assets/js/custom.js')}}"></script>
     <link href="{{asset('assets/css/custom.css')}}" rel="stylesheet">
     <!--//Metis Menu -->
     <!-- Date picker -->

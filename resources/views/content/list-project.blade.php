@@ -4,7 +4,7 @@
 
 <div class="tables">
     <h3 class="title1">Projets</h3>
-    <a href={{ route('add-project') }} class="login-link col-sm-offset-9 ">
+    <a href={{ route('add-project') }} class="login-link col-md-offset-9 ">
         <button name="Sign In" value="Sign In" class="btn btn-default add-btn ">Ajouter Un Projet</button>
     </a>
     <div class="panel-body widget-shadow">
@@ -31,7 +31,10 @@
                             <div class="bar  blue" style="width:{{$data->progress}}%"></div>
                         </div><span class="pull-right">{{$data->progress}}%</span>
                     </td>
-                    <td>{{$data->convID}}</td>
+                    
+                    @foreach($convention as $conv)
+                    <td>{{$conv->id == $data->convID ? $conv->titre : ''}}</td>
+                    @endforeach
                     <td class="d-flex">
                         <a class="mx-1" href="{{ route('show-project',$data->id) }}">
                             <button class="btn fa fa-eye text-success"></button>
