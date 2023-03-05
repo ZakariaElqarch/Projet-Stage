@@ -12,9 +12,7 @@
     margin-top: 20px;
   
 }
-/* .widget-shadow{
-    height: 550px;
-} */
+
 
 
 input[type="date"],
@@ -39,9 +37,7 @@ select {
     margin: 0 0 0;
     margin-left: 5px;
 }
-.update_btn{
-    margin-top:-15px ;
-}
+
 
 .flex {
     display: flexbox;
@@ -68,7 +64,8 @@ select {
 
 
 .action-btn {
-    margin-right: 20px;
+    margin-right:25px;
+    /* margin-left:25px; */
     background: #4c51e9;
 
 }
@@ -83,17 +80,12 @@ label.error {
 
 td {
     text-align: center;
+    width: auto;
+  
 }
 
 .d-flex {
-    width: 230px;
+    text-align: center;
+    width: 270px;
 }
 
-th{
-    text-align: center;
-    margin-left: auto;
-    margin-left: auto;
-}
-.toast-success{
-    background: #6164C1;
-}

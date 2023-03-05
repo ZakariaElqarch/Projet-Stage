@@ -9,9 +9,12 @@
           </a>
         <h3 class="title1">Division</h3>
         <div class="panel-body widget-shadow">
-            Division 1
+
+                <p> {{ $divisions->title }} </p>
+                <p> {{ $divisions->chef }} </p>
+        
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="assets\css\division.css">
+<link rel="stylesheet" href="{{ asset('assets\css\division.css') }}">
 @endsection

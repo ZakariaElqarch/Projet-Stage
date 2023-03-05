@@ -41,7 +41,9 @@
                             <td>{{ $convention->validity}}</td>
                            
                            
-                            <td>{{ $countProject }}</td>
+                            <td>{{ DB::table('projects')
+                                ->where('convention_id', '=', $convention->id)
+                                ->count('convention_id') }}</td>
                             <td class="d-flex">
                                 <form action="{{ route('convention.destroy', $convention->id ) }}" method="post">
                                     @csrf
@@ -52,10 +54,10 @@
                                 </form>
 
                                 <a class="mx-1 action-btn" href="{{ route('convention.edit',$convention->id) }}"><button
-                                        class="btn bi bi-pencil-square text-primary action-btn"></button></a>
+                                        class="btn bi bi-pencil-square  action-btn"></button></a>
 
                                 <a class="mx-1 action-btn" href="{{ route('convention.show',$convention->id) }}"><button
-                                        class="btn bi bi-eye text-success action-btn"></button>
+                                        class="btn bi bi-eye  action-btn"></button>
                                 </a>
 
                             </td>

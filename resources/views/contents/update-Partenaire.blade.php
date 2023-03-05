@@ -1,6 +1,6 @@
 @extends('layouts.layout');
 @section('content');
-@csrf
+
 
 
 <div id="page-wrapper">
@@ -12,8 +12,10 @@
   <h3 class="title1">Partenaire</h3>
 
   <div class="form-three widget-shadow">
-    <form class="form-horizontal commune-form">
+    <form action="{{ route('partenaire.update',$partenaires->id) }}" method="post" class="form-horizontal commune-form">
 
+      @csrf
+      @method('PUT')
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class=" col-sm-8">

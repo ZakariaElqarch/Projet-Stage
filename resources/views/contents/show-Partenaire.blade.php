@@ -4,12 +4,15 @@
 
 <div id="page-wrapper">
     <div class="main-page">
-        <a href={{ route('list-partenaire') }}>
+        <a href={{ route('partenaire.store') }}>
             <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
           </a>
         <h3 class="title1">Partenaire</h3>
         <div class="panel-body widget-shadow">
-            Parenaire 1
+        
+                <p> {{ $partenaires->title }} </p>
+                <p> {{ $partenaires->phone }} </p>
+            </div>
         </div>
     </div>
 </div>

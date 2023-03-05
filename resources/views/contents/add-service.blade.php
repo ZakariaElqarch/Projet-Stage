@@ -34,7 +34,7 @@
          @foreach ($divisions as $division)
              
 
-		 <option value="{{ $division->id }}"> {{ $division->titre }}</option>
+		 <option value="{{ $division->id }}"> {{ $division->title }}</option>
      @endforeach
     
 	   </select>

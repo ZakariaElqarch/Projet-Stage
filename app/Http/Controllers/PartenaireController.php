@@ -106,6 +106,6 @@ class PartenaireController extends Controller
     {
         //
          Partenaire::destroy($id);
-        return redirect()->route('convention.store')->with('success', 'Data was deleted successfully!');
+        return redirect()->route('partenaire.store')->with('success', 'Data was deleted successfully!');
     }
 }

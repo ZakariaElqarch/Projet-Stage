@@ -12,13 +12,13 @@
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre</label>
         <div class="col-sm-8">
-          <input type="text" name="title" class="form-control1" id="focusedinput" value="{{ $conventions->titre }}" placeholder="Titre">
+          <input type="text" name="title" class="form-control1" id="focusedinput" value="{{ $conventions->title }}" placeholder="Titre">
         </div>
       </div>
       <div class="form-group">
         <label class="col-sm-3 control-label">Date debut / fin :</label>
         <div class="col-sm-8">
-          <input type="text" name="validity" id="Validity" value="{{ $conventions->Validity }}" class="form-control1">
+          <input type="text" name="validity" id="Validity" placeholder="{{ $conventions->Validity }}" value="{{ $conventions->Validity }}" class="form-control1">
         </div>
       </div>
       <div class="form-group">
@@ -28,37 +28,46 @@
             id="focusedinput" placeholder="Budget">
         </div>
       </div>
-      {{-- <div class="form-group">
+      <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">Les division:</label>
-        <div class="col-sm-8"><select name="SelectDivision" id="division" class="form-control1">
-            <option>division 1.</option>
-            <option>division 2</option>
-            <option>division 3.</option>
-            <option>division 4.</option>
+        <div class="col-sm-8"><select name="SelectDivision" id="SelectDivision" class="form-control1">
+          @foreach ($divisions as $division )
+
+
+          <option value="{{ $division->id }}">{{ $division->title }}</option>
+          @endforeach
           </select>
         </div>
-      </div> --}}
-      {{-- <div class="form-group">
+      </div> 
+       <div class="form-group">
         <label for="selector1" class="col-sm-3 control-label">Les service :</label>
-        <div class="col-sm-8"><select  name="SelectService" id="service" class="form-control1">
-            <option>service 1.</option>
-            <option>service 2</option>
-            <option>service 3.</option>
-            <option>service 4.</option>
+        <div class="col-sm-8"><select name="SelectService" id="SelectService"
+          data-live-search="true" data-url="{{ route('get-related-data', ':id') }}"
+          class="form-control1">
+         </select>
           </select>
         </div> 
-      </div>--}}
-      {{-- <div class="form-group">
-        <label for="selector1" class="col-sm-3 control-label">Les Partenaires:</label>
-        <div class="col-sm-8"><select name="SelectPartenaire" id="Partenaires" class="form-control1">
-            <option>Partenaire 1.</option>
-            <option>Partenaire 2</option>
-            <option>Partenaire 3.</option>
-            <option>Partenaire 4.</option>
+      </div>
+      <div class="form-group">
+        <label for="selector1"  class="col-sm-3 control-label">Les Partenaires:</label>
+        <div class="col-sm-8"><select multiple name="SelectPartenaire[]" id="Partenaires" class="form-control1">
+          @foreach ($partenaires as $partenaire)
+          <option value="{{ $partenaire->id}}">{{ $partenaire->title }} </option>
+          @endforeach
           </select>
         </div>
       </div>
-      <div> --}}
+      <div class="form-group">
+        <label for="selector1" class="col-sm-3 control-label">Les Communes:<span class="required"> *</span></label>
+        <div class="col-sm-8 errorCommunes"><select multiple name="SelectCommunes[]" id="Communes"
+            class="form-control1">
+            @foreach ( $communes as $commune )
+            <option value="{{ $commune->id }}">{{ $commune->title }}</option>
+            @endforeach
+          </select>
+        </div>
+      </div>
+      <div>
         <button type="submit" class="btn btn-default add-btn update_btn" value="enregistere">Mettre a jour</button>
       </div>
       <div class="required"> </div>

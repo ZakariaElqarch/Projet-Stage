@@ -3,7 +3,7 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a href="{{ route('home') }}" class="active"><i class="bi bi-house nav_icon"></i>Dashboard</a>
+                    <a href="{{ route('dashboard') }}"><i class="bi bi-house nav_icon"></i>Dashboard</a>
                 </li>
 
                 <li>
@@ -11,12 +11,11 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('list-projet') }}"><i class="bi bi-journal-x nav_icon"></i>Projet
-                    </a>
+                    <a href="{{ route('project.index') }}"><i class="bi bi-journal-x nav_icon"></i>Projet</a>
                 </li>
 
                 <li>
-                    <a href="{{ route('division.index') }}"><i class="bi bi-building nav_icon"></i>Devision </a>
+                    <a href="{{ route('division.index') }}"><i class="bi bi-building nav_icon"></i>Division </a>
                 </li>
 
                 <li>

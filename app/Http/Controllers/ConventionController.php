@@ -8,6 +8,7 @@ use App\Models\conventions_communes;
 use App\Models\Division;
 use App\Models\Partenaire;
 use App\Models\Partenaires_convention;
+use App\Models\Project;
 use App\Models\Service;
 use App\Models\services_conventions;
 use Carbon\Carbon;
@@ -27,19 +28,25 @@ class ConventionController extends Controller
         //
         
         $conventions = Convention::all();
-        if(Convention::all()->count() > 0){
-            $countProjects = Convention::withCount('projects')->get();
-        foreach ($countProjects as $countProject) {
-            $countProject =  $countProject->projects_count;
+          
+        foreach ($conventions as $convention) {
+          
+            // $countProjects = DB::table('projects')
+            // ->where('convention_id', '=', 11)
+            // ->count('convention_id');
+            
+            // foreach ($countProjects as $countProject) {
+            //     $countProject =  $countProject->projects_count;
+            // }
+           
         }
-        }else{
-            $countProject=0;
-        }
+        
+        // dd($countProjects);
         
 
 
-        return view('contents.list-convention')->with('conventions', $conventions)
-            ->with('countProject', $countProject);
+        return view('contents.list-convention')->with('conventions', $conventions);
+            // ->with('countProject', $countProjects);
     }
 
     /**
@@ -118,7 +125,7 @@ class ConventionController extends Controller
                 "id_service" => $ServiceId
             ]);
         }
-
+        //  toastr()->success('Projet Ajouter!');
         return redirect()->route('convention.store')->with('success', 'Data has been saved successfully!');
     }
 
@@ -131,8 +138,16 @@ class ConventionController extends Controller
     public function show($id)
     {
         //
+        $services = Service::all();
+        $divisions = Division::all();
+        $communes = Commune::all();
+        $partenaires = Partenaire::all();
         $conventions = Convention::find($id);
-        return view('contents.show-convention')->with('conventions', $conventions);
+        return view('contents.show-convention')
+                    ->with('conventions', $conventions)->with('communes', $communes)
+            ->with('partenaires', $partenaires)
+            ->with('divisions', $divisions)
+            ->with('services', $services);
     }
 
     /**
@@ -144,8 +159,15 @@ class ConventionController extends Controller
     public function edit($id)
     {
         //
+        $services = Service::all();
+        $divisions = Division::all();
+        $communes = Commune::all();
+        $partenaires = Partenaire::all();
         $conventions = Convention::find($id);
-        return view('contents.update-convention')->with('conventions', $conventions);
+        return view('contents.update-convention')->with('conventions', $conventions)->with('communes', $communes)
+        ->with('partenaires', $partenaires)
+        ->with('divisions', $divisions)
+        ->with('services', $services);
     }
 
     /**

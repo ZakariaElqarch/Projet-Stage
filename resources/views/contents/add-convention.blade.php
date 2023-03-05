@@ -52,7 +52,7 @@
         <label for="selector1" class="col-sm-3 control-label">Service :<span class="required">
             *</span></label>
         <div class="col-sm-8 errorService">
-          <select multiple name="SelectService[]" id="SelectService"
+          <select name="SelectService" id="SelectService"
            data-live-search="true" data-url="{{ route('get-related-data', ':id') }}"
            class="form-control1">
           </select>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('assets\css\profile.css') }}">
 <div class="sticky-header header-section ">
     <div class="header-left">
 
@@ -24,8 +25,9 @@
 			<li class="dropdown profile_details_drop">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 					<div class="profile_img">
+						<span class="prfil-img"><img src="{{ Auth::user()->picture }}" class="avatar"alt=""> </span> 
 						<div class="user-name">
-							<p>Hamza</p>
+							<p>{{ Auth::user()->given_name }}</p>
 							<span>Administrator</span>
 						</div>
 						<i class="fa fa-angle-down lnr"></i>
@@ -35,11 +37,12 @@
 				</a>
 				<ul class="dropdown-menu drp-mnu">
 					<li> <a href="{{ route('profile')}}"><i class="fa fa-user"></i> Profile</a> </li>
-					<li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+					<li> <a href="{{ route("logout") }}"><i class="fa fa-sign-out"></i> Logout</a> </li>
 				</ul>
 			</li>
 		</ul>
 	</div>
     </div>
     <div class="clearfix"> </div>	
+
 </div>

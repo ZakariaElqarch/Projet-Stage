@@ -7,8 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+
+
     use HasFactory;
-    public function Convention(){
+
+
+    protected $fillable = [
+        ' id ',
+        'convention_id ',
+        'title ',
+        'validity',
+        'budget ',
+        'phase ',
+        'progress '
+
+    ];
+    public function Convention()
+    {
         return $this->belongsTo(Convention::class);
     }
 }

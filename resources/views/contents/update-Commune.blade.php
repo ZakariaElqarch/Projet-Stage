@@ -14,6 +14,7 @@
   <div class="form-three widget-shadow">
     <form action="{{ route('commune.update',$communes->id) }}" method="post" class="form-horizontal commune-form">
       @csrf
+      @method('PUT')
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">Titre<span class="required"> *</span></label>
         <div class=" col-sm-8">
