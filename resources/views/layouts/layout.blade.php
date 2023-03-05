@@ -66,7 +66,7 @@
     <link href="{{asset('assets/vendors/css/toastify.min.css')}}" rel="stylesheet">
 
     {{-- profile css --}}
-    
+    <link href="{{asset('assets/css/list.css')}}" rel="stylesheet">
     
     @vite('resources/js/app.js')
 </head>

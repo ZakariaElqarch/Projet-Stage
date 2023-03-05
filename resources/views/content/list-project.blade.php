@@ -37,13 +37,13 @@
                     @endforeach
                     <td class="d-flex">
                         <a class="mx-1" href="{{ route('show-project',$data->id) }}">
-                            <button class="btn fa fa-eye text-success"></button>
+                            <button class="btn fa fa-eye text-success action-btn"></button>
                         </a>
                         <a class="mx-1" href="{{ route('edit-project',$data->id)}}">
-                            <button class="btn fa fa-edit text-primary"></button>
+                            <button class="btn fa fa-edit text-primary action-btn"></button>
                         </a>
                         <a class="mx-1"  href="{{ route('delete-project',$data->id)}}" class="btn fa fa-trash-o text-danger">
-                            <button class="btn fa fa-trash-o text-danger" ></button>
+                            <button class="btn fa fa-trash-o text-danger action-btn" ></button>
                         </a>
                     </td>
 

@@ -17,7 +17,7 @@ use App\Http\Controllers\projectController;
 
 Route::get('/test', function () {
     return view('auth0.user');
-})->middleware(['auth0.authenticate']);
+});//->middleware(['auth0.authenticate']);
 
 
 
@@ -27,31 +27,31 @@ Route::get('/auth0/callback', \Auth0\Laravel\Http\Controller\Stateful\Callback::
 
 Route::get('/', function () {
     return view('content.home');
-})->name('home')->middleware(['auth0.authenticate']);
+})->name('home');//->middleware(['auth0.authenticate']);
 
 // Require an authenticated session to access this route.
 Route::get('/required', function () {
     return view('auth0.user');
-})->middleware(['auth0.authenticate']);
+});//->middleware(['auth0.authenticate']);
 
 Route::get('/profile', function () {
     return view('content.profile');
-})->middleware(['auth0.authenticate'])->name('profile');
+})->name('profile');//->middleware(['auth0.authenticate'])
 
-Route::get('/add-project', [projectController::class, 'create'])->name('add-project')->middleware(['auth0.authenticate']);
-Route::post('/add-project', [projectController::class, 'store'])->middleware(['auth0.authenticate'])->middleware(['auth0.authenticate']);
-
-
-Route::get('/list-project', [projectController::class, 'index'])->name('list-project')->middleware(['auth0.authenticate']);
+Route::get('/add-project', [projectController::class, 'create'])->name('add-project');//->middleware(['auth0.authenticate']);
+Route::post('/add-project', [projectController::class, 'store']);//->middleware(['auth0.authenticate']);//->middleware(['auth0.authenticate']);
 
 
-Route::get('/edit-project/{id}', [projectController::class, 'edit'])->name('edit-project')->middleware(['auth0.authenticate']);
-Route::put('/edit-project/{id}', [projectController::class, 'update'])->middleware(['auth0.authenticate']);
-
-Route::get('/delete-project/{id}', [projectController::class, 'destroy'])->name('delete-project')->middleware(['auth0.authenticate']);
+Route::get('/list-project', [projectController::class, 'index'])->name('list-project');//->middleware(['auth0.authenticate']);
 
 
-Route::get('/show-project/{id}', [projectController::class, 'show'])->name('show-project')->middleware(['auth0.authenticate']);
+Route::get('/edit-project/{id}', [projectController::class, 'edit'])->name('edit-project');//->middleware(['auth0.authenticate']);
+Route::put('/edit-project/{id}', [projectController::class, 'update']);//->middleware(['auth0.authenticate']);
+
+Route::get('/delete-project/{id}', [projectController::class, 'destroy'])->name('delete-project');//->middleware(['auth0.authenticate']);
+
+
+Route::get('/show-project/{id}', [projectController::class, 'show'])->name('show-project');//->middleware(['auth0.authenticate']);
 
 
 
