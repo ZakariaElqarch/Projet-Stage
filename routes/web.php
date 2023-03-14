@@ -27,9 +27,12 @@ Route::get('/auth0/callback', \Auth0\Laravel\Http\Controller\Stateful\Callback::
 
 Route::get('/', function () {
     return view('content.home');
-})->name('home');//->middleware(['auth0.authenticate']);
+})->name('home')->middleware(['auth0.authenticate']);
+
+//old routes
 
 // Require an authenticated session to access this route.
+
 Route::get('/required', function () {
     return view('auth0.user');
 });//->middleware(['auth0.authenticate']);
@@ -37,7 +40,7 @@ Route::get('/required', function () {
 Route::get('/profile', function () {
     return view('content.profile');
 })->name('profile');//->middleware(['auth0.authenticate'])
-
+/*
 Route::get('/add-project', [projectController::class, 'create'])->name('add-project');//->middleware(['auth0.authenticate']);
 Route::post('/add-project', [projectController::class, 'store']);//->middleware(['auth0.authenticate']);//->middleware(['auth0.authenticate']);
 
@@ -52,6 +55,8 @@ Route::get('/delete-project/{id}', [projectController::class, 'destroy'])->name(
 
 
 Route::get('/show-project/{id}', [projectController::class, 'show'])->name('show-project');//->middleware(['auth0.authenticate']);
+*/
 
 
 
+Route::resource('project', App\Http\Controllers\projectController::class)->middleware(['auth0.authenticate']);

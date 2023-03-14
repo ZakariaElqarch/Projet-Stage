@@ -4,7 +4,7 @@
 
 <div class="tables">
     <h3 class="title1">Projets</h3>
-    <a href={{ route('add-project') }} class="login-link col-md-offset-9 ">
+    <a href={{ route('project.create') }} class="login-link col-md-offset-9 ">
         <button name="Sign In" value="Sign In" class="btn btn-default add-btn ">Ajouter Un Projet</button>
     </a>
     <div class="panel-body widget-shadow">
@@ -36,15 +36,21 @@
                     <td>{{$conv->id == $data->convID ? $conv->titre : ''}}</td>
                     @endforeach
                     <td class="d-flex">
-                        <a class="mx-1" href="{{ route('show-project',$data->id) }}">
+                        <a class="mx-1" href="{{ route('project.show',$data->id) }}">
                             <button class="btn fa fa-eye text-success action-btn"></button>
                         </a>
-                        <a class="mx-1" href="{{ route('edit-project',$data->id)}}">
+                        <a class="mx-1" href="{{ route('project.edit',$data->id)}}">
                             <button class="btn fa fa-edit text-primary action-btn"></button>
                         </a>
-                        <a class="mx-1"  href="{{ route('delete-project',$data->id)}}" class="btn fa fa-trash-o text-danger">
+                        <form action="{{ route('project.destroy', $data->id ) }}" method="post" style="display:inline">
+                            @csrf
+                            @method('DELETE')
+                             <a class="mx-1" class="btn fa fa-trash-o text-danger">
                             <button class="btn fa fa-trash-o text-danger action-btn" ></button>
                         </a>
+                        </form>
+
+                       
                     </td>
 
                 </tr>

@@ -11,7 +11,7 @@
                 </li>
 
                 <li>
-                    <a href="{{ route('list-project')}}"><i class="bi bi-journal-x nav_icon" viewBox="0 0 16 16"></i>Projet
+                    <a href="{{ route('project.index')}}"><i class="bi bi-journal-x nav_icon" viewBox="0 0 16 16"></i>Projet
                     </a>
                 </li>
 

@@ -56,7 +56,7 @@ class projectController extends Controller
         if ($project instanceof Model) {
             toastr()->success('Projet Ajouter!');
 
-            return redirect()->route('add-project');
+            return redirect()->route('project.create');
         }
 
         toastr()->error('Un erreur est survenue, veuillez réessayer plus tard.');
@@ -117,7 +117,7 @@ class projectController extends Controller
         if ($project instanceof Model) {
             toastr()->success('Project Modifier!');
 
-            return redirect()->route('list-project');
+            return redirect()->route('project');
         }
 
         toastr()->error('Un erreur est survenue, veuillez réessayer plus tard.');
@@ -136,6 +136,6 @@ class projectController extends Controller
     {
         $project = Project::find($id);
         $project->delete();
-        return redirect('list-project')->with('status','updated');
+        return redirect('project')->with('status','updated');
     }
 }

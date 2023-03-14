@@ -4,7 +4,7 @@
 
 <!-- Form start Here -->
 <h3 class="title1">Modifier Un Projet:</h3>
-<a href={{ route('list-project') }} class="login-link col-sm-offset-9 ">
+<a href={{ route('project.index') }} class="login-link col-sm-offset-9 ">
     <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
 </a>
 @if(session('status'))

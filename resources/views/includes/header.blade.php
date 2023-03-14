@@ -18,7 +18,7 @@
 			<li class="dropdown profile_details_drop">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 					<div class="profile_img">	
-						{{-- <span class="prfil-img"><img src="{{ Auth::user()->picture }}" class="avatar"alt=""> </span>  --}}
+						<span class="prfil-img"><img src="{{ Auth::user()->picture }}" class="avatar"alt=""> </span> 
 						<div class="user-name">
 							{{-- <p>{{ Auth::user()->given_name }}</p> --}}
 							<span>Administrator</span>
