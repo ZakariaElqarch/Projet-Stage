@@ -14,6 +14,39 @@
         <div class="panel-body widget-shadow">
             <p> {{$project->title}} </p>
             <p> {{ $project->validationDate }} </p>
+            <table class="table">
+                <tr>
+                  <th>id</th>
+                  <td>{{ $project->id }}</td>
+      
+                </tr>
+                <tr>
+                  <th>Titre</th>
+                  <td>{{ $project->title }}</td>
+      
+                </tr>
+                <tr>
+                  <th>Budget </th>
+                  <td>{{ $project->budget }}</td>
+      
+                </tr>
+                <tr>
+                  <th>pahse</th>
+                  <td>{{ $project->phase }}</td>
+      
+                </tr>
+                <tr>
+                  <th>Progress </th>
+                  <td>{{ $project->progress }}</td>
+      
+                </tr>
+                <tr>
+                  <th>cenvention lier </th>
+                  <td>{{ $title }}</td>
+      
+                </tr>
+              </table>
+            </div>
         </div>
     </div>
 </div>

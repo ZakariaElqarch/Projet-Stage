@@ -7,20 +7,23 @@ $(document).on("ready", function () {
   });
 
 
-    $('#Validity').daterangepicker({
-      autoUpdateInput: false,
-      locale: {
+  $("#Validity").daterangepicker({
+    autoUpdateInput: false,
+    locale: {
         cancelLabel: 'Clear'
-      }
-    });
+    }
+});
 
-    $('#Validity').on('apply.daterangepicker', function (ev, picker) {
-      $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
-    });
+$("#Validity").on('apply.daterangepicker', function (ev, picker) {
+    $(this).val(picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY'));
+    console.log(
+        picker.startDate.format('MM/DD/YYYY') + ' - ' + picker.endDate.format('MM/DD/YYYY')
+    );
+});
 
-    $('#Validity').on('cancel.daterangepicker', function (ev, picker) {
-      $(this).val('');
-    });
+$("#Validity").on('cancel.daterangepicker', function (ev, picker) {
+    $(this).val('');
+});
 
   jQuery.validator.addMethod("checkName", function (titre, element) {
     var regExp = new RegExp(/^[a-zA-Z0-9]+$/);

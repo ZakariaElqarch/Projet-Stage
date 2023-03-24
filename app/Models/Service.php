@@ -14,7 +14,8 @@ class Service extends Model
         'email',
         'tel'
         ];
-        public function Division(){
+        public function division()
+        {
             return $this->belongsTo(Division::class);
         }
 

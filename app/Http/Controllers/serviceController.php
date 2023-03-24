@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Division;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class serviceController extends Controller
 {
@@ -64,7 +65,14 @@ class serviceController extends Controller
     {
         //
         $services = Service::find($id);
-        return view('contents.show-service')->with('services', $services);
+        $title = Division::whereHas('services', function ($query) use ($id) {
+            $query->where('id', $id);
+        })->value('title');
+     
+
+        $services = Service::find($id);
+        return view('contents.show-service')->with('services', $services) 
+        ->with('title', $title);
     }
 
     /**
@@ -76,10 +84,13 @@ class serviceController extends Controller
     public function edit($id)
     {
         //
+
         $divisions=Division::all();
         $services = Service::find($id);
+      
         return view('contents.update-service')->with('services', $services)
                                                     ->with('divisions', $divisions);
+       
     }
 
     /**

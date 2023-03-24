@@ -1,6 +1,8 @@
 @extends('layouts.layout');
 
 @section('content');
+<link rel="stylesheet" href="{{ asset('assets\css\partenaire.css') }}">
+<link rel="stylesheet" href="{{ asset('assets\css\Table.show.css') }}">
 
 <div id="page-wrapper">
     <div class="main-page">
@@ -12,9 +14,33 @@
         
                 <p> {{ $partenaires->title }} </p>
                 <p> {{ $partenaires->phone }} </p>
+                <div class="table-responsive table-wrapper">
+                    <table class="table">
+                      <tr>
+                        <th>id</th>
+                        <td>{{ $partenaires->id }}</td>
+            
+                      </tr>
+                      <tr>
+                        <th>Titre</th>
+                        <td>{{ $partenaires->title }}</td>
+            
+                      </tr>
+                      <tr>
+                        <th>Email du Commune </th>
+                        <td>{{ $partenaires->email }}</td>
+            
+                      </tr>
+                      <tr>
+                        <th>N tel du Commune </th>
+                        <td>{{ $partenaires->phone }}</td>
+            
+                      </tr>
+                    </table>
+                  </div>
             </div>
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="{{ asset('assets\css\partenaire.css') }}">
+
 @endsection

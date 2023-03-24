@@ -13,6 +13,18 @@
   
 }
 
+
+
+input[type="date"],
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
 .add-btn {
     display: flex;
     border: none;
@@ -26,9 +38,7 @@
     margin-left: 5px;
     width: max-content;
 }
-.update_btn{
-    margin-top:-15px ;
-}
+
 
 .flex {
     display: flexbox;
@@ -55,20 +65,11 @@
 
 
 .action-btn {
-    margin-right: 25px;
+    margin-right:25px;
+    /* margin-left:25px; */
     background: #4c51e9;
     width: max-content;
 
-}
-input[type="tel"],
-input[type="email"],
-input[type="text"]
- {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
 }
 .btn {
     float: right;
@@ -81,14 +82,13 @@ label.error {
 
 td {
     text-align: center;
+    width: auto;
+  
 }
 
 .d-flex {
-    width: 200px;
+   width: 200px;
+   
+
 }
 
-th{
-    text-align: center;
-    margin-left: auto;
-    margin-left: auto;
-}

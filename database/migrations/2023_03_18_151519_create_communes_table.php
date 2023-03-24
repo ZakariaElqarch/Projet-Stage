@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('conventions', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('title', 255);
-            $table->string('validity');
-            $table->string('budget', 1000);
+        Schema::create('communes', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('email');
+            $table->string('phone');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('conventions');
+        Schema::dropIfExists('communes');
     }
 };

@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/project.css') }}">
 {{-- <link rel="stylesheet" href="{{ asset('assets/css/division.css') }}"> --}}
 <div id="page-wrapper">
     <a href={{ route('project.create') }}>
@@ -65,7 +65,7 @@
                                         class="btn bi bi-pencil-square  action-btn"></button></a>
 
                                 <a class="mx-1 " href="{{ route('project.show',$data->id) }}"><button
-                                        class="btn bi bi-eye  action-btn"></button>
+                                        class="btn bi bi-eye action-btn"></button>
                                 </a>
 
                             </td>

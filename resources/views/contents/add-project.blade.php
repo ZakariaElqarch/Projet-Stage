@@ -41,7 +41,7 @@
                 <div class="col-sm-8">
                     <select name="convention" class="form-control1">
                         <option selected value="" disabled>Select</option>
-                        @foreach ($Allconvention as $data )
+                        @foreach ($convention as $data )
                         <option value="{{ $data->id }}">{{ $data->title }}</option>
                         @endforeach
                     </select>
@@ -76,8 +76,7 @@
             <div class="col-md-offset-8 btn-div">
                 <button type="reset" class="btn btn-primary  add-btn costum-btn">Vider</button>
                 <button type="submit" class="btn btn-primary add-btn costum-btn" id="enregister">Enregitrer</button>
-                {{-- <input type="button" class="btn btn-primary costum-btn" id="test" /> --}}
-                <!-- <input type="button"  class="btn btn-primary costum-btn" id="test2"/>  -->
+
             </div>
         </form>
 
@@ -89,7 +88,5 @@
 <link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
 <script src="{{ asset('assets\vendors\js\jquery-1.11.1.min.js') }}"></script>
 <script src="{{ asset('assets\js\from.project.js') }}"></script>
-{{-- <script src="{{ asset('assets\js\convention.js') }}"></script> --}}
-    <!-- Form end Here -->
 
     @endsection

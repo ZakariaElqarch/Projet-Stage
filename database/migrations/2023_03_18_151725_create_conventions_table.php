@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('services_conventions', function (Blueprint $table) {
-            
-            $table->foreignId('id_convention')->references('id')->on('conventions')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
+        Schema::create('conventions', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->foreignId('id_service')->references('id')->on('services')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
-            $table->primary(['id_convention','id_service']);
+            $table->foreignId('id_division')->references('id')->on('divisions')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
+            $table->string('title', 255);
+            $table->string('validity');
+            $table->string('budget', 1000);
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services_conventions');
+        Schema::dropIfExists('conventions');
     }
 };

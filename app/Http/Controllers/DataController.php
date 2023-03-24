@@ -10,6 +10,7 @@ class DataController extends Controller
     //
     public function getRelatedData($id)
     {
+        
         $ServiceData = Service::where('id_division', $id)->get();
         return response()->json($ServiceData);
     }

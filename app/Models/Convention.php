@@ -13,6 +13,7 @@ class Convention extends Model
         'date_Validiter',
         'budget'
         ];
+
         public function Commune(){
             return $this->hasMany(Commune::class);
         }

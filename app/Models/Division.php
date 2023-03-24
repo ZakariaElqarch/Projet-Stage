@@ -14,7 +14,8 @@ class Division extends Model
         'email',
         'tel'
         ];
-        public function Service(){
+        public function services()
+        {
             return $this->hasMany(Service::class);
         }
 }

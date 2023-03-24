@@ -14,17 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('services', function (Blueprint $table) {
-        
-                $table->id();
-                $table->foreignId('id_division')->references('id')->on('divisions')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
-                $table->string('title',255);
-                $table->string('chef',255);
-                $table->string('email');
-                $table->string('phone');
-                $table->timestamps();
-          
-    
-    
+
+            $table->id();
+            $table->foreignId('id_division')->references('id')->on('divisions')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
+            $table->string('title', 255);
+            $table->string('chef', 255);
+            $table->string('email');
+            $table->string('phone');
+            $table->timestamps();
         });
     }
 

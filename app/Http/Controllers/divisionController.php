@@ -41,8 +41,8 @@ class divisionController extends Controller
     {
         //
         
-    Division::create([
-            "title" => $request->title,
+    Division::create([                  
+            "title" => $request->title, 
             "chef" => $request->chef,
             "email" => $request->mail,
             "tel" => $request->phone

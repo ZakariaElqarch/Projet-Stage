@@ -28,25 +28,8 @@ class ConventionController extends Controller
         //
         
         $conventions = Convention::all();
-          
-        foreach ($conventions as $convention) {
-          
-            // $countProjects = DB::table('projects')
-            // ->where('convention_id', '=', 11)
-            // ->count('convention_id');
-            
-            // foreach ($countProjects as $countProject) {
-            //     $countProject =  $countProject->projects_count;
-            // }
-           
-        }
-        
-        // dd($countProjects);
-        
-
 
         return view('contents.list-convention')->with('conventions', $conventions);
-            // ->with('countProject', $countProjects);
     }
 
     /**
@@ -61,7 +44,10 @@ class ConventionController extends Controller
         $divisions = Division::all();
         $communes = Commune::all();
         $partenaires = Partenaire::all();
-        return view('contents.add-convention')->with('communes', $communes)
+
+
+        return view('contents.add-convention')
+            ->with('communes', $communes)
             ->with('partenaires', $partenaires)
             ->with('divisions', $divisions)
             ->with('services', $services);
@@ -79,6 +65,8 @@ class ConventionController extends Controller
             "title" => $request->title,
             "validity" => $request->validity,
             "budget" => $request->budget,
+            "id_division" => $request->SelectDivision,
+            "id_service" => $request->SelectService,
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
@@ -111,22 +99,8 @@ class ConventionController extends Controller
                 "id_partenaire" => $PartenaireId
             ]);
         }
-
-        $SelectService = $request->input('SelectService');
-        if (is_array($SelectService)) {
-            $ServiceArray = $SelectService;
-        } else {
-            $ServiceArray = explode(',', $SelectService);
-        }
-
-        foreach ($ServiceArray as $ServiceId) {
-            services_conventions::create([
-                "id_convention" =>  $id,
-                "id_service" => $ServiceId
-            ]);
-        }
-        //  toastr()->success('Projet Ajouter!');
-        return redirect()->route('convention.store')->with('success', 'Data has been saved successfully!');
+        return redirect()->route('convention.store')
+        ->with('success', 'Data was saved successfully!');
     }
 
     /**
@@ -142,9 +116,14 @@ class ConventionController extends Controller
         $divisions = Division::all();
         $communes = Commune::all();
         $partenaires = Partenaire::all();
+
+
+
+
+
         $conventions = Convention::find($id);
-        return view('contents.show-convention')
-                    ->with('conventions', $conventions)->with('communes', $communes)
+        return view('contents.show-convention')->with('conventions', $conventions)
+            ->with('communes', $communes)
             ->with('partenaires', $partenaires)
             ->with('divisions', $divisions)
             ->with('services', $services);
@@ -160,14 +139,26 @@ class ConventionController extends Controller
     {
         //
         $services = Service::all();
-        $divisions = Division::all();
+       
         $communes = Commune::all();
         $partenaires = Partenaire::all();
-        $conventions = Convention::find($id);
-        return view('contents.update-convention')->with('conventions', $conventions)->with('communes', $communes)
+        
+       
+       $partenaireSelected = DB::select('Select id_partenaire from gestion_convention_test.partenaires_conventions where id_convention = ?',[$id]);
+      
+       $communeSelected = DB::select('Select id_commune from gestion_convention_test.conventions_communes where id_convention = ?',[$id]); 
+        
+       $divisions = Division::all();
+
+       $conventions = Convention::find($id);
+
+        return view('contents.update-convention')->with('conventions', $conventions)
+        ->with('communes', $communes)
         ->with('partenaires', $partenaires)
         ->with('divisions', $divisions)
-        ->with('services', $services);
+        ->with('services', $services)
+        ->with('partenaireSelected', $partenaireSelected)
+        ->with('communeSelected', $communeSelected);
     }
 
     /**
@@ -184,6 +175,8 @@ class ConventionController extends Controller
             "title" => $request->title,
             "validity" => $request->validity,
             "budget" => $request->budget,
+            "id_division" => $request->SelectDivision,
+            "id_service" => $request->SelectService,
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ];
         Convention::where('id', $id)->update($update);
@@ -196,10 +189,10 @@ class ConventionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id) 
     {
         //
         Convention::destroy($id);
-        return redirect()->route('convention.store')->with('success', 'Data has been deleted successfully!');
+        return redirect()->route('convention.index')->with('success', 'Data has been deleted successfully!');
     }
 }

@@ -3,26 +3,16 @@
 @section('content');
 <link rel="stylesheet" href="{{ asset('assets\css\convention.css') }}">
 <div id="page-wrapper">
-
     <a href={{ route('convention.create') }}>
-        <button class="btn add-btn flex">Ajouter Une Convention</button>
+        <button class="btn flex add-btn ">Ajouter Une Convention</button>
     </a>
     <h3 class="title1">Convention</h3>
     <div class="main-page">
-
-
         <div id="ConventionTable">
-
             <div class="panel-body widget-shadow">
                 @if(session('success'))
                 toastr.success('{{ session('success') }}');
             @endif
-          
-            
-            
-            
-            
-            
                 <table class="table" id="ConventionTable">
                     <thead>
                         <tr>

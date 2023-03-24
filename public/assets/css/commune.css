@@ -34,6 +34,7 @@ input[type="text"]
     font-size: 1em;
     margin: 0 0 0;
     margin-left: 5px;
+    width: max-content;
 }
 .update_btn{
     margin-top:-15px ;
@@ -65,6 +66,7 @@ input[type="text"]
 .action-btn {
     margin-right: 25px;
     background: #4c51e9;
+    width: max-content;
 
 }
 
@@ -77,5 +79,5 @@ td  {
     text-align: center;
   }
   .d-flex{
-    width: 200px;
+    width: max-content;
   }

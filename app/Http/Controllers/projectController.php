@@ -30,9 +30,9 @@ class projectController extends Controller
      */
     public function create()
     {
-        $Allconvention = Convention::all();
+        $convention = Convention::all();
         return view('contents.add-project')
-        ->with('Allconvention', $Allconvention);
+        ->with('convention', $convention);
     }
 
     /**
@@ -78,7 +78,10 @@ class projectController extends Controller
     public function show($id)
     {
         $project = project::find($id);
-        return view('contents.add-project')->with('project',$project);
+        $title = Convention::whereHas('projects', function ($query) use ($id) {
+            $query->where('id', $id);
+        })->value('title');
+        return view('contents.show-project')->with('project',$project)->with('title', $title);
     }
 
     /**

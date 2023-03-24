@@ -1,6 +1,7 @@
 $(document).ready(function() {
-    $('#SelectDivision').change(function() {
+    $('#SelectDivision').on('click',function() {
       var id = $(this).val();
+      console.log(id)
       var url = $('#SelectService').data('url').replace(':id', id);
       if(id) {
         $.ajax({
@@ -13,7 +14,15 @@ $(document).ready(function() {
           success: function(data) {
             $('#SelectService').empty();
             $.each(data, function(index, ServiceData) {
+              console.log(id)
+              console.log(ServiceData.id_division)
+           
+             if(id == ServiceData.id_division){
+              $('#SelectService').append('<option selected value="' + ServiceData.id + '"  >' + ServiceData.title + '</option>');
+             }else{
               $('#SelectService').append('<option value="' + ServiceData.id + '">' + ServiceData.title + '</option>');
+             }
+              
             });
           }
         });

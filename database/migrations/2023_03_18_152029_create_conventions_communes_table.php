@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -15,8 +16,6 @@ return new class extends Migration
     {
         //
         Schema::create('conventions_communes', function (Blueprint $table) {
-            // $table->primary('id_convention'); 
-            // $table->primary('id_commune'); 
 
             $table->foreignId('id_convention')->references('id')->on('conventions')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
             $table->foreignId('id_commune')->references('id')->on('communes')->constrained()->onDelete('cascade')->onUpdate('cascade')->string();
