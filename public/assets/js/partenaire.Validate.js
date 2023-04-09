@@ -7,7 +7,7 @@ const phone = $('input[name="phone"]').val();
 $('#PartenaireTable').DataTable()
 
 jQuery.validator.addMethod("checkTel", function (phone, element) {
-  var regExp = new RegExp(/^05\d/);
+  var regExp = new RegExp(/^05.\d/);
   return this.optional(element) ||
     regExp.test(phone);
 

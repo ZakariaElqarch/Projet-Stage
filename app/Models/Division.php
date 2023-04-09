@@ -9,10 +9,10 @@ class Division extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'titre',
+        'title',
         'chef',
         'email',
-        'tel'
+        'phone'
         ];
         public function services()
         {

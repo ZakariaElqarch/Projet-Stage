@@ -7,7 +7,7 @@
     <a href={{ route('project.create') }}>
         <button class="btn add-btn flex">Ajouter Une Projet</button>
     </a>
-    <h3 class="title1">Projet</h3>
+    <h3 class="title1"><i class="bi bi-journal-x nav_icon"> Projet</i></h3>
     <div class="main-page">
 
 
@@ -27,7 +27,7 @@
                         <tr>
                             <th>#</th>
                             <th>Titre</th>
-                            <th>>Date Validité</th>
+                            <th>Date Validité</th>
                             <th>Taux d'avancement</th>
                             <th>Convention</th>
                             <th>Action</th>

@@ -9,9 +9,9 @@ class Partenaire extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'titre',
+        'title',
         'email',
-        'tel'
+        'phone'
         ];
         public function Convention(){
             return $this->belongsTo(Convention::class);

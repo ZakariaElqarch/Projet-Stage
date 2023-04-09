@@ -19,10 +19,10 @@ class ProjectFactory extends Factory
         return [
             //
             'convention_id' => random_int(1, 10),
-            'title' => 'Projet' . random_int(1, 10),
+            'title' => 'Projet' . random_int(1, 20),
             'validity' => fake()->date() . "-" . fake()->date(),
             'budget' => random_int(100000, 100000000) . "DH",
-            'phase' => 'execution',
+            'phase' => 'initiale',
             'progress' => random_int(1, 100)
 
 

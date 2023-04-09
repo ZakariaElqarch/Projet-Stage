@@ -6,18 +6,18 @@
 
 <div id="page-wrapper">
     <div class="main-page">
+      <a href={{ route('partenaire.edit', $partenaires->id) }}>
+        <button name="Sign In" class="btn btn-default add-btn ">Mettre a jour</button>
+      </a>
         <a href={{ route('partenaire.store') }}>
             <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
           </a>
-        <h3 class="title1">Partenaire</h3>
+          <h3 class="title1"><i class="bi bi-people-fill nav_icon"> Partenaire</i></h3>
         <div class="panel-body widget-shadow">
-        
-                <p> {{ $partenaires->title }} </p>
-                <p> {{ $partenaires->phone }} </p>
                 <div class="table-responsive table-wrapper">
                     <table class="table">
                       <tr>
-                        <th>id</th>
+                        <th>Id</th>
                         <td>{{ $partenaires->id }}</td>
             
                       </tr>

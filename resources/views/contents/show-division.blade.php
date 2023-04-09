@@ -7,15 +7,18 @@
 
 <div id="page-wrapper">
     <div class="main-page">
+      <a href={{ route('division.edit', $divisions->id) }}>
+        <button name="Sign In" class="btn btn-default add-btn ">Mettre a jour</button>
+      </a>
         <a href={{ route('division.store') }}>
             <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
           </a>
-        <h3 class="title1">Division</h3>
+        <h3 class="title1"><i class="bi bi-building nav_icon"> Division</i> </h3>
         <div class="panel-body widget-shadow">
                 <div class="table-responsive table-wrapper">
                     <table class="table">
                       <tr>
-                        <th>id</th>
+                        <th>Id</th>
                         <td>{{ $divisions->id }}</td>
             
                       </tr>
@@ -41,8 +44,6 @@
                       </tr>
                     </table>
                   </div>
-            
-        
         </div>
     </div>
 </div>

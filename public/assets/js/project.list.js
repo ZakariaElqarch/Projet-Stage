@@ -1,6 +1,6 @@
 
 
-$(document).on("ready", function () {
+$(document).ready( function () {
 
     $('.table').DataTable({
         responsive: true

@@ -6,7 +6,7 @@
     <a href={{ route('convention.create') }}>
         <button class="btn flex add-btn ">Ajouter Une Convention</button>
     </a>
-    <h3 class="title1">Convention</h3>
+    <h3 class="title1"><i class="bi bi-file-text nav_icon">Convention</i></h3>
     <div class="main-page">
         <div id="ConventionTable">
             <div class="panel-body widget-shadow">
@@ -18,7 +18,7 @@
                         <tr>
                             <th>#</th>
                             <th>Titre</th>
-                            <th>Date de début - fin</th>
+                            <th>Date Validité</th>
                             <th>Nomber des projets</th>
                             <th>action</th>
                         </tr>

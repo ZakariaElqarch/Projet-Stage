@@ -18,8 +18,8 @@ class partenaires_conventionFactory extends Factory
     {
         return [
             //
-            'id_convention'=>random_int(1,10),
-            'id_partenaire'=>random_int(1,10),
+            'id_convention'=>random_int(1,20),
+            'id_partenaire'=>random_int(1,20),
         ];
     }
 }

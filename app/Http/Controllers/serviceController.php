@@ -45,7 +45,7 @@ class serviceController extends Controller
         //
         
         $Service = new Service;
-        $Service->id_division = $request->selectdivision;
+        $Service->division_id = $request->selectdivision;
         $Service->title = $request->title;
         $Service->chef = $request->chef;
         $Service->email = $request->mail;
@@ -106,7 +106,7 @@ class serviceController extends Controller
        
       
         $update = [
-           'id_division' =>$request->selectdivision,
+           'division_id' =>$request->selectdivision,
             'title' => $request->title,
            'chef' => $request->chef,
            'email' => $request->mail,

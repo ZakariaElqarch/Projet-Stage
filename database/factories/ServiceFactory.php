@@ -18,8 +18,8 @@ class ServiceFactory extends Factory
     {
         return [
             //
-            'id_division'=>random_int(1,10),
-           'title'=>'Service'.random_int(1,10),
+            'division_id'=>random_int(1,20),
+           'title'=>'Service'.random_int(1,20),
            'chef'=>fake()->name(),
            'email'=>fake()->email(),
            'phone'=>fake()->phoneNumber()

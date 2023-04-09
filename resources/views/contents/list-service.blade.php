@@ -5,34 +5,25 @@
 <div id="page-wrapper">
 
     <a href={{ route('service.create') }}>
-        <button class="btn add-btn flex">Ajouter Une Service</button>
+        <button class="btn add-btn flex">Ajouter Un Service</button>
     </a>
-    <h3 class="title1">Services:</h3>
+    <h3 class="title1"><i class="bi bi-house-gear nav_icon"> Service</i></h3>
     <div class="main-page">
-
-
-
         <div >
-
             <div class="panel-body widget-shadow">
             <table class="table" id="ServiceTable">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Titre</th>
-                           
-                          
-                            <th>Chef </th>
-                            <th>division</th>
+                            <th>Titre</th> 
+                            <th>Chef de Service</th>
+                            <th>Division</th>
                             <th>Tel</th>
                             <th>Action</th>
-                            
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($services as $service)
-                            
-                     
                         <tr>
                             <th scope="row">{{ $service->id }}</th>
                             <td> {{ $service->title }}</td>
@@ -48,17 +39,13 @@
                                         onclick="return confirm('Etes-vous sûr de supprimer cette convention?')"></button>
                                     </a>
                                 </form>
-                               
-
                                 <a class="mx-1 action-btn" href="{{ route('service.edit',$service->id) }}"><button
                                     class="btn bi bi-pencil-square text-primary action-btn"></button></a>
 
                                 <a class="mx-1 action-btn" href="{{ route('service.show',$service->id) }}"><button
                                     class="btn bi bi-eye text-success action-btn"></button>
                                 </a>
-
                             </td>
-
                         </tr>
                         @endforeach
                     </tbody>

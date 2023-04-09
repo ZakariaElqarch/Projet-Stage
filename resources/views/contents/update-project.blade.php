@@ -1,12 +1,12 @@
 @extends('layouts.layout')
 
 @section('content')
+
 <div id="page-wrapper">
-    <!-- Form start Here -->
-    <h3 class="title1">Modifier Un Projet:</h3>
-    <a href={{ route('project.store') }} class="login-link col-sm-offset-9 ">
+    <a href={{ route('project.store') }}>
         <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
     </a>
+    <h3 class="title1"><i class="bi bi-journal-x nav_icon"> Projet</i></h3>
     @if(session('status'))
     {{session('status')}}
     @endif
@@ -68,8 +68,7 @@
             </div>
 
             <div class="form-group">
-                <label for="focusedinput" class="col-sm-2 control-label">Taux d'avancement<span class="required">
-                        *</span></label>
+                <label for="focusedinput" class="col-sm-2 control-label">Taux d'avancement<span class="required">*</span></label>
                 <div class="col-sm-7">
                     <input type="range" name="progress" class="form-range " min="0" max="100" id="advancementRange"
                         value="{{$project->progress}}">
@@ -82,8 +81,9 @@
 
 
             <div class="col-md-offset-8 btn-div">
-                <button type="reset" class="btn  add-btn costum-btn">Vider</button>
                 <button type="submit" class="btn add-btn costum-btn" id="enregister">Mettre a Jour</button>
+                <button type="reset" class="btn  add-btn costum-btn">Vider</button>
+                
             </div>
         </form>
 

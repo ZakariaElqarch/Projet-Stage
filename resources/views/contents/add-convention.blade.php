@@ -2,16 +2,13 @@
 @section('content');
 @csrf
 
-
+<link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
 <div id="page-wrapper">
 
   <a href={{ route('convention.store') }}>
     <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
   </a>
-
-
-
-  <h3 class="title1">Convention</h3>
+ <h3 class="title1"><i class="bi bi-file-text nav_icon"> Convention</i></h3>
 
   <div class="form-three widget-shadow">
     <form action="{{ route('convention.store') }}" method="POST" class="form-horizontal Convention-form">
@@ -23,7 +20,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="col-sm-3 control-label">Date de debut - fin: <span class="required"> *</span></label>
+        <label class="col-sm-3 control-label">Date Validation <span class="required"> *</span></label>
         <div class="col-sm-8">
           <input type="text" class="form-control1" name="validity" id="Validity" placeholder="date de validiter" />
         </div>
@@ -89,7 +86,7 @@
     </form>
   </div>
 </div>
-<link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
+
 <script src="{{ asset('assets\vendors\js\jquery-1.11.1.min.js') }}"></script>
 <script src="{{ asset('assets\js\convention-Form.js') }}"></script>
 <script src="{{ asset('assets\js\convention.js') }}"></script>

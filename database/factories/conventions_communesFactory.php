@@ -18,8 +18,8 @@ class conventions_communesFactory extends Factory
     {
         return [
             //
-            'id_convention'=>random_int(1,10),
-            'id_commune'=>random_int(1,10),
+            'id_convention'=>random_int(1,20),
+            'id_commune'=>random_int(1,20),
         ];
     }
 }

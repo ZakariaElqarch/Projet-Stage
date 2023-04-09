@@ -55,10 +55,11 @@
           <input type="tel" name="phone"  class="form-control1 phone" placeholder="tel" value="{{ $services->phone }}">
         </div>
       </div>
-      <div class="col-sm-offset-2">
-        <button type="submit" class="sub btn btn-default add-btn">enregistere</button>
-
-      </div>
+      <div class="col-md-offset-8 btn-div">
+        <button type="submit" class="btn add-btn costum-btn" id="enregister">Mettre a Jour</button>
+        <button type="reset" class="btn  add-btn costum-btn">Vider</button>
+        
+    </div>
       <div class="required"> * : Ces champs sont obligatoires</div>
     </form>
   </div>

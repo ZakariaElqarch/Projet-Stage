@@ -1,13 +1,13 @@
 @extends('layouts.layout');
 
 @section('content');
-
+<link rel="stylesheet" href="{{ asset('assets\css\division.css') }}">
 <div id="page-wrapper">
 
     <a href={{ route('division.create') }}>
         <button class="btn add-btn flex">Ajouter Une Division</button>
     </a>
-    <h3 class="title1">Divisions:</h3>
+    <h3 class="title1"><i class="bi bi-building nav_icon"> Division</i></h3>
     <div class="main-page">
 
 
@@ -21,7 +21,7 @@
                             <th>#</th>
                             <th>Titre</th>                          
                             <th>Chef </th>
-                            <th>email</th>
+                            <th>Email</th>
                             <th>Tel</th>
                             <th>Action</th>
                         </tr>
@@ -61,7 +61,7 @@
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="{{ asset('assets\css\division.css') }}">
+
 <script src="{{ asset('assets\vendors\js\jquery-1.11.1.min.js') }}"></script>
 <script src="{{ asset('assets\js\division.js') }}"></script>
 @endsection

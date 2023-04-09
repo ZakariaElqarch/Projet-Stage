@@ -45,7 +45,7 @@ class divisionController extends Controller
             "title" => $request->title, 
             "chef" => $request->chef,
             "email" => $request->mail,
-            "tel" => $request->phone
+            "phone" => $request->phone
         ]);
         return redirect()->route('division.store')->with('success', 'Data has been saved successfully!');
     }

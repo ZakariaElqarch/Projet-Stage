@@ -9,7 +9,7 @@
     <a href={{ route('commune.store') }}>
       <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
     </a>
-    <h3 class="title1">Commune</h3>
+    <h3 class="title1"><i class="bi bi-buildings nav_icon">Commune</i></h3>
   
   <div class="form-three widget-shadow">
     <form action="{{ route('commune.update',$communes->id) }}" method="post" class="form-horizontal commune-form">
@@ -37,6 +37,7 @@
       </div>
       <div class="col-sm-offset-2">
         <button type="submit" class="sub btn btn-default add-btn update_btn">Mettre a jour</button>
+        <button type="reset" class="sub btn btn-default add-btn update_btn">Vider</button>
       </div>
     </form>
   </div>

@@ -23,7 +23,7 @@
 
                 </li>
                 <li>
-                    <a href="{{ route('commune.index') }}"><i class="bi bi-buildings nav_icon"></i>commune</a>
+                    <a href="{{ route('commune.index') }}"><i class="bi bi-buildings nav_icon"></i>Commune</a>
                 </li>
                 <li>
                     <a href="{{ route('partenaire.index') }}"><i class="bi bi-people-fill nav_icon"></i>Partenaire</a>

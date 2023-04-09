@@ -9,7 +9,7 @@
     <a href={{ route('commune.store') }}>
       <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
     </a>
-    <h3 class="title1">Commune</h3>
+    <h3 class="title1"><i class="bi bi-buildings nav_icon"> Commune</i></h3>
   
   <div class="form-three widget-shadow">
     <form action="{{ route('commune.store') }}" method="POST" class="form-horizontal commune-form">
@@ -22,20 +22,20 @@
       </div>
 
       <div class="form-group">
-        <label for="focusedinput" class="col-sm-3 control-label">e-mail<span class="required"> *</span></label>
+        <label for="focusedinput" class="col-sm-3 control-label">E-mail<span class="required"> *</span></label>
         <div class="col-sm-8">
-          <input type="email" name="mail" class="form-control1" placeholder="e-mail">
+          <input type="email" name="mail" class="form-control1" placeholder="E-mail">
         </div>
       </div>
 
       <div class="form-group">
         <label for="focusedinput" class="col-sm-3 control-label">N-tel<span class="required"> *</span></label>
         <div class="col-sm-8">
-          <input type="tel" name="phone" class="form-control1" placeholder="tel">
+          <input type="tel" name="phone" class="form-control1" placeholder="Tel">
         </div>
       </div>
       <div class="col-sm-offset-2">
-        <button type="submit" class="sub btn btn-default add-btn">enregistere</button>
+        <button type="submit" class="sub btn btn-default add-btn">Enregistere</button>
         <button type="reset" class="btn btn-default add-btn">Vider</button>
 
       </div>

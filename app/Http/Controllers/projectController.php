@@ -142,6 +142,6 @@ class projectController extends Controller
     {
         $project = project::find($id);
         $project->delete();
-        return redirect('list-project')->with('status', 'updated');
+        return redirect('project.store')->with('status', 'updated');
     }
 }

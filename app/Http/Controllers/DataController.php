@@ -11,7 +11,7 @@ class DataController extends Controller
     public function getRelatedData($id)
     {
         
-        $ServiceData = Service::where('id_division', $id)->get();
+        $ServiceData = Service::where('division_id', $id)->get();
         return response()->json($ServiceData);
     }
 }

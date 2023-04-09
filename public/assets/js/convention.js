@@ -15,9 +15,9 @@ $(document).ready(function() {
             $('#SelectService').empty();
             $.each(data, function(index, ServiceData) {
               console.log(id)
-              console.log(ServiceData.id_division)
+              console.log(ServiceData.division_id)
            
-             if(id == ServiceData.id_division){
+             if(id == ServiceData.division_id){
               $('#SelectService').append('<option selected value="' + ServiceData.id + '"  >' + ServiceData.title + '</option>');
              }else{
               $('#SelectService').append('<option value="' + ServiceData.id + '">' + ServiceData.title + '</option>');

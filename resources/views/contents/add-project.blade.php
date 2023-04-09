@@ -1,14 +1,18 @@
 @extends('layouts.layout')
 
 @section('content')
-
+<link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
 
 <div id="page-wrapper">
-    <!-- Form start Here -->
-    <h3 class="title1">Projet:</h3>
-    <a href={{ route('project.store') }} class="login-link col-sm-offset-9 ">
+
+    
+    <a href={{ route('project.store') }} >
         <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
     </a>
+     <h3 class="title1"><i class="bi bi-journal-x nav_icon"> Projet</i></h3>
+
+
+
     <div class="form-three widget-shadow">
         <form class="form-horizontal" id="addProjectForm" action="{{ route('project.store') }}" method="POST">
             @csrf
@@ -74,8 +78,9 @@
 
 
             <div class="col-md-offset-8 btn-div">
-                <button type="reset" class="btn btn-primary  add-btn costum-btn">Vider</button>
                 <button type="submit" class="btn btn-primary add-btn costum-btn" id="enregister">Enregitrer</button>
+                <button type="reset" class="btn btn-primary  add-btn costum-btn">Vider</button>
+             
 
             </div>
         </form>
@@ -85,7 +90,7 @@
         </div>
     </div>
 </div>
-<link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
+
 <script src="{{ asset('assets\vendors\js\jquery-1.11.1.min.js') }}"></script>
 <script src="{{ asset('assets\js\from.project.js') }}"></script>
 

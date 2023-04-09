@@ -7,7 +7,7 @@
         <a href={{ route('partenaire.create') }}>
                 <button class="btn add-btn flex">Ajouter Un Partenaire</button>
         </a>
-        <h3 class="title1">Partenaire</h3>
+        <h3 class="title1"><i class="bi bi-people-fill nav_icon"> Partenaire</i></h3>
         <div class="main-page">
 
 

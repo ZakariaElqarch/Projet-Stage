@@ -7,7 +7,7 @@
     <a href="{{ route('commune.create') }}">
         <button class="btn add-btn flex">Ajouter Une Commune</button>
     </a>
-    <h3 class="title1">Commune</h3>
+    <h3 class="title1"><i class="bi bi-buildings nav_icon"> Commune</i></h3>
     <div class="main-page">
 
 

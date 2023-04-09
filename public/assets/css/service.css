@@ -79,16 +79,16 @@ label.error {
     font-size: 14px;
 }
 
-td {
+/* td {
     text-align: center;
-}
+} */
 
 .d-flex {
     width: 200px;
 }
 
 th{
-    text-align: center;
+    /* text-align: center; */
     margin-left: auto;
     margin-left: auto;
 }

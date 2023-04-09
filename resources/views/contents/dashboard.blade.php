@@ -112,9 +112,9 @@ let valuesRealise = [];
         valuesRealise.push(0);
     @endif
 @endforeach
-        console.log(valuesRealise)
-        console.log(valuesInitial)
-        console.log(valuesExecution)
+        // console.log(valuesRealise)
+        // console.log(valuesInitial)
+        // console.log(valuesExecution)
         const dataBar = {
             labels: Months,
             datasets: [{

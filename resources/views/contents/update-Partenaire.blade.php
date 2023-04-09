@@ -9,7 +9,7 @@
   <a href={{ route('partenaire.store') }}>
     <button name="Sign In" class="btn btn-default add-btn ">Retour</button>
   </a>
-  <h3 class="title1">Partenaire</h3>
+  <h3 class="title1"><i class="bi bi-people-fill nav_icon"> Partenaire</i></h3>
 
   <div class="form-three widget-shadow">
     <form action="{{ route('partenaire.update',$partenaires->id) }}" method="post" class="form-horizontal commune-form">
@@ -38,6 +38,7 @@
       </div>
       <div class="col-sm-offset-2">
         <button type="submit" class="sub btn btn-default add-btn update_btn">Mettre a jour</button>
+        <button type="reset" class="sub btn btn-default add-btn update_btn">Vider</button>
       </div>
     </form>
   </div>
