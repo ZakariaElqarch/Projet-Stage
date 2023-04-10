@@ -66,4 +66,6 @@ Route::get('/auth0/callback', \Auth0\Laravel\Http\Controller\Stateful\Callback::
 //     return view('auth0.user');
 // })->middleware(['auth0.authenticate']);
 
-
+route::fallback(function(){
+    return view('layouts.404');
+});
