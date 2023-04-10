@@ -15,7 +15,7 @@ jQuery.validator.addMethod("checkTel", function (phone, element) {
 
 $(".commune-form").validate({
   rules: {
-    titre:
+    title:
     {
       required: true,
       checkName: true

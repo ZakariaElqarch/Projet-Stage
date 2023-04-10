@@ -5,7 +5,7 @@
 {{-- <link rel="stylesheet" href="{{ asset('assets/css/division.css') }}"> --}}
 <div id="page-wrapper">
     <a href={{ route('project.create') }}>
-        <button class="btn add-btn flex">Ajouter Une Projet</button>
+        <button class="btn add-btn flex">Ajouter Un Projet</button>
     </a>
     <h3 class="title1"><i class="bi bi-journal-x nav_icon"> Projet</i></h3>
     <div class="main-page">

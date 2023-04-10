@@ -6,6 +6,7 @@ use App\Models\Division;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class serviceController extends Controller
 {
@@ -43,16 +44,28 @@ class serviceController extends Controller
     public function store(Request $request)
     {
         //
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'chef'=>'required',
+            'mail' => 'required|email',
+            'phone'=>'required|regex:/^05.\d/|max:14',
+            
+            ]);
+           if($validator->fails()){
+            return redirect()->route('service.create')->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+            $Service = new Service;
+            $Service->division_id = $request->selectdivision;
+            $Service->title = $request->title;
+            $Service->chef = $request->chef;
+            $Service->email = $request->mail;
+            $Service->phone = $request->phone;
+             
+            $Service->save();
+            return redirect()->route('service.create')->with('success', 'Data has been saved successfully!');
+           }
         
-        $Service = new Service;
-        $Service->division_id = $request->selectdivision;
-        $Service->title = $request->title;
-        $Service->chef = $request->chef;
-        $Service->email = $request->mail;
-        $Service->phone = $request->phone;
-         
-        $Service->save();
-        return redirect()->route('service.store')->with('success', 'Data has been saved successfully!');
+       
     }
 
     /**
@@ -102,9 +115,6 @@ class serviceController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-       
-      
         $update = [
            'division_id' =>$request->selectdivision,
             'title' => $request->title,
@@ -113,8 +123,20 @@ class serviceController extends Controller
            'phone' => $request->phone,
            
         ];
-        Service::where('id', $id)->update($update);
-        return redirect()->route('service.store')->with('success', 'Update was successful!');
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'chef'=>'required',
+            'mail' => 'required|email',
+            'phone'=>'required|regex:/^05.\d/|max:14',
+            
+            ]);
+           if($validator->fails()){
+            return redirect()->back()->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+            Service::where('id', $id)->update($update);
+            return redirect()->route('project.store')->with('success', 'Update was successful!');
+           }
+       
     }
 
     /**

@@ -23,7 +23,7 @@ $("#CommuneTable").DataTable({
 
   $(".commune-form").validate({
     rules: {
-      titre:
+      title:
       {
         required: true,
         checkName: true

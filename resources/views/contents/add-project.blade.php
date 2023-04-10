@@ -4,7 +4,12 @@
 <link rel="stylesheet" href="{{ asset('assets/css/convention.css') }}">
 
 <div id="page-wrapper">
+    @if (session('error'))
+    toastr.error({{ session('error') }});
 
+@elseif (session('error'))
+    toastr.success({{ session('success') }});
+@endif
     
     <a href={{ route('project.store') }} >
         <button name="Sign In" class="btn btn-default add-btn ">Retour</button>

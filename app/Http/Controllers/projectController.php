@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\project;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Convention;
+use Illuminate\Support\Facades\Validator;
+
 
 class projectController extends Controller
 {
@@ -43,7 +45,17 @@ class projectController extends Controller
      */
     public function store(Request $request)
     {
-        $project = new project;
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'validationDate'=>'required',
+            'budget' => 'required',
+            'convention'=>'required',
+            'phase'=>'required',
+            ]);
+           if($validator->fails()){
+            return redirect()->route('project.create')->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+            $project = new project;
         $project->title = $request->title;
         $project->validity = $request->validationDate;
         $project->budget = $request->budget;
@@ -60,12 +72,14 @@ class projectController extends Controller
         if ($project instanceof Model) {
        
 
-            return redirect()->route('project.create')->with('success', 'Data wasa saved successfully!');
+            return redirect()->route('project.create')->with('success', 'Data was saved successfully!');
         }
 
      
 
         return back()->with('success', 'Data was saved successfully!');
+           }
+        
         //return redirect('add-project')->with('status','added');
     }
 
@@ -109,7 +123,7 @@ class projectController extends Controller
 
     public function update(Request $request, $id)
     {
-
+        
         if ($request->phase == 'initiale') {
            $progress= 0;
         } elseif ($request->phase == 'realise') {
@@ -126,8 +140,21 @@ class projectController extends Controller
             'phase'=> $request->phase,
             'progress'=> $progress,
         ];
-        Project::where('id', $id)->update($update);
+
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'validationDate'=>'required',
+            'budget' => 'required',
+            'convention'=>'required',
+            'phase'=>'required',
+            ]);
+           if($validator->fails()){
+            return redirect()->back()->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+            Project::where('id', $id)->update($update);
         return redirect()->route('project.store')->with('success', 'Update was successful!');
+           }
+        
 
 
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Division;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class divisionController extends Controller
 {
@@ -40,14 +41,26 @@ class divisionController extends Controller
     public function store(Request $request)
     {
         //
-        
-    Division::create([                  
-            "title" => $request->title, 
-            "chef" => $request->chef,
-            "email" => $request->mail,
-            "phone" => $request->phone
-        ]);
-        return redirect()->route('division.store')->with('success', 'Data has been saved successfully!');
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'chef'=>'required',
+            'mail' => 'required|email',
+            'phone'=>'required|regex:/^05.\d/|max:14',
+            
+            ]);
+           if($validator->fails()){
+            return redirect()->route('division.create')->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+            Division::create([   
+                       
+                "title" => $request->title, 
+                "chef" => $request->chef,
+                "email" => $request->mail,
+                "phone" => $request->phone
+            ]);
+            return redirect()->route('division.create')->with('success', 'Data has been saved successfully!');
+           }
+    
     }
 
     /**
@@ -93,9 +106,21 @@ class divisionController extends Controller
             "email" => $request->mail,
             "phone" => $request->phone
         ];
-        Division::where('id', $id)->update($update);
-        return redirect()->route('division.store')->with('success', 'Update was successful!');
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'chef'=>'required',
+            'mail' => 'required|email',
+            'phone'=>'required|regex:/^05.\d/|max:14',
+            
+            ]);
+           if($validator->fails()){
+            return redirect()->back()->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+    Division::where('id', $id)->update($update);
+    return redirect()->route('division.store')->with('success', 'Update was successful!');
+}
     }
+    
 
     /**
      * Remove the specified resource from storage.

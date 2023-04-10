@@ -33,28 +33,36 @@ $("#Validity").on('cancel.daterangepicker', function (ev, picker) {
 
   $(".Convention-form").validate({
     rules: {
-      titre: {
+      title: {
         required: true,
         checkName: true
       },
-      Validity: {
+      validity: {
         required: true,
 
       },
-      budget: "required",
-      SelectDivision: "required",
-      SelectService: "required",
-      SelectPartenaire: "required",
-      SelectCommunes: "required",
-    },
-    messages: {
-      datefilter: "date is required",
-      budget: "budget is required",
-      SelectDivision: "Division is required",
-      SelectService: "Service is required",
-      SelectPartenaire: "Partenaire is required",
-      SelectCommunes: "Partenaire is required",
+      budget: {
+        required: true,
+
+      },
+      SelectDivision: {
+        required: true,
+
+      },
+      SelectService: {
+        required: true,
+
+      },
+      SelectPartenaire: {
+        required: true,
+
+      },
+      SelectCommunes: {
+        required: true,
+
+      },
     }
+    
   });
 
 });

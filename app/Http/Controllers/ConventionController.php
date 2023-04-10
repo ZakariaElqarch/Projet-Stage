@@ -15,6 +15,8 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
+
 
 class ConventionController extends Controller
 {
@@ -61,18 +63,28 @@ class ConventionController extends Controller
      */
     public function store(Request $request)
     {
-        $id = DB::table('conventions')->insertGetId([
-            "title" => $request->title,
-            "validity" => $request->validity,
-            "budget" => $request->budget,
-            "id_division" => $request->SelectDivision,
-            "id_service" => $request->SelectService,
-            'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
-            'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
-        ]);
 
 
-        $SelectCommunes = $request->input('SelectCommunes');
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'validity'=>'required',
+            'budget' => 'required',
+            'SelectDivision'=>'required',
+            'SelectService'=>'required',
+            ]);
+           if($validator->fails()){
+            return redirect()->route('convention.create')->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+            $id = DB::table('conventions')->insertGetId([
+                "title" => $request->title,
+                "validity" => $request->validity,
+                "budget" => $request->budget,
+                "id_division" => $request->SelectDivision,
+                "id_service" => $request->SelectService,
+                'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
+                'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
+            ]);
+            $SelectCommunes = $request->input('SelectCommunes');
         if (is_array($SelectCommunes)) {
             $CommunesArray = $SelectCommunes;
         } else {
@@ -99,8 +111,15 @@ class ConventionController extends Controller
                 "id_partenaire" => $PartenaireId
             ]);
         }
-        return redirect()->route('convention.store')
+        return redirect()->route('convention.create')
         ->with('success', 'Data was saved successfully!');
+           }
+           
+
+       
+
+
+        
     }
 
     /**
@@ -171,6 +190,7 @@ class ConventionController extends Controller
     public function update(Request $request, $id)
     {
         //
+
         $update = [
             "title" => $request->title,
             "validity" => $request->validity,
@@ -179,8 +199,20 @@ class ConventionController extends Controller
             "id_service" => $request->SelectService,
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ];
-        Convention::where('id', $id)->update($update);
-        return redirect()->route('convention.store')->with('success', 'Update was successful!');
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'validity'=>'required',
+            'budget' => 'required',
+            'SelectDivision'=>'required',
+            'SelectService'=>'required',
+            ]);
+           if($validator->fails()){
+            return redirect()->back()->with('error', 'Remplire les champs correctemment')->withInput();
+           }else{
+            Convention::where('id', $id)->update($update);
+            return redirect()->route('convention.store')->with('success', 'Update was successful!');
+           }
+      
     }
 
     /**

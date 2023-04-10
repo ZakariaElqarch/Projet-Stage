@@ -20,7 +20,7 @@
                             <th>Titre</th>
                             <th>Date Validité</th>
                             <th>Nomber des projets</th>
-                            <th>action</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
